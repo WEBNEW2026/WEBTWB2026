@@ -1,0 +1,206 @@
+/* Google Fonts Import - MUST be first */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@300;400;500;600;700&display=swap');
+
+/* Tailwind CSS - Airbnb Luxe Design System */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Variables - Air BNB Luxe Design System */
+:root {
+  /* Colors */
+  --color-white: #FFFFFF;
+  --color-gray-50: #F7F7F7;
+  --color-gray-100: #EBEBEB;
+  --color-gray-400: #B0B0B0;
+  --color-gray-600: #717171;
+  --color-gray-900: #222222;
+
+  --color-primary: #2D5F4C;
+  --color-primary-dark: #1F4A38;
+  --color-accent: #C87E5B;
+  --color-success: #008A05;
+  --color-error: #C13515;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 6px 20px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 12px 40px rgba(0, 0, 0, 0.18);
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 200ms ease;
+  --transition-medium: 300ms ease;
+  --transition-slow: 600ms ease;
+}
+
+/* Base Styles */
+@layer base {
+  * {
+    @apply antialiased;
+  }
+
+  body {
+    @apply font-sans text-gray-900 bg-white;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}
+
+/* Component Layer - Reusable Patterns */
+@layer components {
+
+  /* Ken Burns Animation for Hero */
+  @keyframes kenBurns {
+
+    0%,
+    100% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+  .animate-ken-burns {
+    animation: kenBurns 12s ease-in-out infinite;
+  }
+
+  /* Slow Push Animation */
+  @keyframes slowPush {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.15);
+    }
+  }
+
+  .animate-slow-push {
+    animation: slowPush 20s ease-in-out infinite alternate;
+    transform-origin: center center;
+    will-change: transform;
+  }
+
+  /* Fade Up Animation */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 1s ease-out forwards;
+  }
+
+  /* Custom Scrollbar (Airbnb Style) */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: var(--color-gray-50);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--color-gray-400);
+    border-radius: var(--radius-full);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gray-600);
+  }
+}
+
+/* Utility Layer */
+@layer utilities {
+
+  /* Backdrop Blur Utility */
+  .backdrop-blur-safe {
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+
+  /* Text Clamp Utilities */
+  .line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media print {
+  * {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* Safe Area Utilities for iPhone */
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.px-safe {
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out forwards;
+}

@@ -1,0 +1,697 @@
+{
+    "nav": {
+        "home": "主页",
+        "villas": "别墅",
+        "resto": "餐饮",
+        "facility": "设施",
+        "gallery": "画廊",
+        "offers": "优惠",
+        "membership": "会员",
+        "about": "关于",
+        "contact": "联系",
+        "location": "位置",
+        "faq": "常见问题",
+        "blog": "博客",
+        "bookNow": "立即预订"
+    },
+    "home": {
+        "hero": {
+            "headline": "专属山林度假胜地",
+            "subheadline": "距离雅加达仅两小时,在纯正奢华中寻找宁静",
+            "cta": "立即预订",
+            "trust": "自 2018 年 · 28 栋专属别墅",
+            "scroll": "滚动"
+        },
+        "whatsapp": {
+            "inquiry": "您好，我想预订别墅"
+        },
+        "seo": {
+            "title": "Taman Wisata Bougenville | 万隆豪华山顶度假村",
+            "description": "在 Taman Wisata Bougenville 体验大自然中的奢华。独家私人别墅，从农场到餐桌的有机餐饮，以及万隆 Puntang 山的原始自然体验。",
+            "keywords": "万隆别墅, puntang 山度假村, 万隆豪华露营, 万隆家庭聚会, 西爪哇蜜月别墅"
+        },
+        "location": "班达楠泰山,万隆",
+        "welcomeTitle": "欢迎来到布根维尔旅游公园",
+        "welcomeDesc": "在泰山的大自然怀抱中寻找宁静。我们的专属别墅旨在提供难忘的度假体验,距离雅加达仅2小时车程。",
+        "featuredVillasLabel": "住宿",
+        "featuredVillasTitle": "精选别墅",
+        "viewAllVillas": "查看所有别墅",
+        "experiencesTitle": "让每一刻都成为冒险",
+        "fromPrice": "起价",
+        "viewDetails": "查看详情",
+        "guestLabel": "{{count}} 位客人",
+        "mountainView": "山景"
+    },
+    "experiences": {
+        "nature": "自然探索",
+        "natureDesc": "在Bougenville发现原始之美与清新自然",
+        "picnic": "家庭野餐",
+        "picnicDesc": "创造持久的回忆",
+        "waterfall": "瀑布徒步",
+        "waterfallDesc": "冒险等待着您",
+        "stargazing": "观星",
+        "stargazingDesc": "在万千星空下"
+    },
+    "footer": {
+        "tagline": "扎根于纳加拉泰山遗产的豪华山地圣地。以最纯粹的形式重新连接大自然。",
+        "exploreTitle": "探索",
+        "infoTitle": "信息",
+        "contactTitle": "联系方式",
+        "newsletterTitle": "通讯订阅",
+        "newsletterPlaceholder": "电子邮箱地址",
+        "subscribe": "订阅",
+        "copyright": "© 2024 布根维尔旅游公园。版权所有。",
+        "privacyPolicy": "隐私政策",
+        "termsOfService": "服务条款",
+        "reception": "前台",
+        "inquiries": "咨询",
+        "visitUs": "访问我们",
+        "whatsappBooking": "通过WhatsApp预订",
+        "selectVilla": "选择别墅",
+        "submit": "提交请求"
+    },
+    "trust": {
+        "reviews": "5星级评价",
+        "guests": "快乐的客人",
+        "featured": "精选于",
+        "media": "KOMPAS · DETIK"
+    },
+    "villa": {
+        "categories": {
+            "all": "所有别墅",
+            "luxury": "豪华系列",
+            "log_home": "原木小屋",
+            "couple": "情侣专享"
+        },
+        "freeBreakfast": "免费早餐",
+        "amenities": "设施",
+        "description": "描述",
+        "availability": "可用性",
+        "pax": "人",
+        "capacity": "容量",
+        "bedrooms": "卧室",
+        "bathrooms": "浴室",
+        "checkAvailability": "查看可用性",
+        "bookThisVilla": "预订此别墅",
+        "weekdayPrice": "工作日价格",
+        "weekendPrice": "周末价格",
+        "notFound": "未找到别墅",
+        "notFoundDesc": "您查找的别墅不存在。",
+        "pricingDetails": "价格详情",
+        "weekday": "工作日",
+        "weekdayDays": "周一 - 周四",
+        "weekend": "周末",
+        "weekendDays": "周五 - 周六",
+        "highSeason": "旺季",
+        "highSeasonDays": "节假日",
+        "taxNote": "价格不含10%税费和服务费。价格可能会有变动。",
+        "taxNoteShort": "价格不含10%税费",
+        "sleepingArrangements": "睡眠安排",
+        "room": "房间",
+        "facilities": "别墅设施",
+        "roomFacilities": "房间设施",
+        "naturalFeatures": "自然特色",
+        "dining": "餐饮",
+        "houseRules": "入住须知",
+        "checkIn": "入住",
+        "checkOut": "退房",
+        "smoking": "吸烟",
+        "noSmoking": "房间内禁止吸烟",
+        "importantNotes": "重要提示",
+        "showAllPhotos": "查看所有照片",
+        "area": "别墅面积"
+    },
+    "booking": {
+        "title": "您的预订",
+        "checkIn": "入住",
+        "checkOut": "退房",
+        "guests": "客人",
+        "selectVilla": "选择别墅",
+        "submit": "提交请求",
+        "whatsappBooking": "通过WhatsApp预订",
+        "noCharge": "暂不收费",
+        "serviceFee": "服务费",
+        "cleaningFee": "清洁费",
+        "included": "已包含",
+        "total": "总计",
+        "nights": "晚",
+        "night": "晚",
+        "estimatedTotal": "预估总价",
+        "weekdayNights": "工作日",
+        "weekendNights": "周末",
+        "highSeasonNights": "旺季",
+        "priceNote": "预估价格，不含10%税费",
+        "selectDates": "选择日期以查看价格预估",
+        "whatsappMessageVilla": "您好，我想预订{{villaName}}。%0A%0A入住：{{checkIn}}%0A退房：{{checkOut}}%0A客人数：{{guests}}%0A%0A预估{{nights}}晚费用：{{price}}%0A%0A请确认是否有空房。"
+    },
+    "about": {
+        "title": "关于我们",
+        "subtitle": "自然遗产与奢华的完美融合",
+        "story": "我们的故事",
+        "ctaTitle": "开始您的旅程",
+        "ctaDesc": "我们邀请您成为我们故事的一部分。立即预订您的住宿。",
+        "stats": {
+            "zero": "零",
+            "local": "本地"
+        },
+        "mission": "我们的使命",
+        "values": "我们的价值观",
+        "philosophyLabel": "我们的理念",
+        "philosophyTitle": "回归真正的自然",
+        "philosophyDesc1": "在现代生活的喧嚣中，Taman Wisata Bougenville 是距离雅加达仅2小时车程的专属避世胜地。我们相信真正的奢华不是人造的宏伟，而是与自然的亲密相处、珍贵的宁静以及与挚爱亲人共度的美好时光。",
+        "philosophyDesc2": "Bougenville的每一个角落都旨在让您更接近自然、家人和自我。在Puntang山脚下的古老松林中发现真正的奢华。",
+        "valuesLabel": "我们的价值观",
+        "valuesTitle": "我们的价值观",
+        "valueHeritageTitle": "传承",
+        "valueHeritageDesc": "通过尊重自然的建筑和真诚的巽他式热情好客，传承纳加拉Puntang王国的精神。",
+        "valueSustainabilityTitle": "可持续发展",
+        "valueSustainabilityDesc": "采用我们自己花园的有机食材的农场到餐桌理念。我们致力于环保实践。",
+        "valueAuthenticityTitle": "真实性",
+        "valueAuthenticityDesc": "真诚的体验，没有矫饰。从员工的热情欢迎到实心柚木内饰的每一个细节。",
+        "valueCommunityTitle": "社区",
+        "valueCommunityDesc": "通过酒店培训和与周边农民的合作，赋能当地社区。",
+        "historyLabel": "历史与传统",
+        "historyTitle": "纳加拉Puntang的遗产",
+        "historyDesc1": "几个世纪前，\"纳加拉Puntang\"王国曾在这片土地上巍然屹立。这是一个以与自然和谐共处和对山区资源的明智管理而闻名的王国。",
+        "historyDesc2": "我们通过尊重自然的建筑和真诚的巽他式热情好客来保持这种精神。每栋别墅都秉承\"与自然融合而不改变它\"的理念设计——这是我们的祖先几百年来一直践行的理念。",
+        "historyDesc3": "Puntang山不仅仅是一个地方。它是历史的见证者，传统的守护者，也是世世代代全心呵护这片古老松林的人们的家园。",
+        "responsibilityLabel": "我们的责任",
+        "responsibilityTitle": "我们对自然的承诺",
+        "responsibilityDesc": "作为一个位于山区腹地的度假村，我们有责任保护支撑这份美丽的生态系统。Bougenville秉持\"不留痕迹\"原则，并完全致力于自然保护。",
+        "statRenewable": "可再生能源",
+        "statWaste": "废物政策",
+        "statCommunity": "社区优先"
+    },
+    "contact": {
+        "title": "联系我们",
+        "subtitle": "我们随时为您服务",
+        "name": "姓名",
+        "email": "电子邮件",
+        "phone": "电话",
+        "message": "留言",
+        "chatNow": "立即聊天",
+        "sendEmail": "发送电子邮件",
+        "formLabel": "Message & Questions",
+        "form": {
+            "fullName": "全名",
+            "emailAddress": "电子邮件地址",
+            "phone": "电话号码",
+            "checkIn": "预计入住日期",
+            "checkOut": "预计退房日期",
+            "messageLabel": "留言",
+            "sending": "发送中...",
+            "submit": "发送消息",
+            "success": "谢谢！您的消息已成功发送。",
+            "placeholders": {
+                "name": "张三",
+                "email": "zhangsan@example.com",
+                "phone": "+86 123 4567 8901",
+                "message": "请告诉我们您的需求..."
+            },
+            "validation": {
+                "nameRequired": "姓名为必填项",
+                "emailRequired": "电子邮件为必填项",
+                "emailInvalid": "无效的电子邮件格式",
+                "phoneRequired": "电话号码为必填项",
+                "phoneInvalid": "无效的电话号码",
+                "messageRequired": "留言内容为必填项"
+            }
+        },
+        "send": "发送消息",
+        "address": "西爪哇万隆泰山路",
+        "openHours": "周一至周日:上午8:00 - 晚上8:00",
+        "specialists": {
+            "title": "认识我们的预订专家",
+            "subtitle": "个人协助",
+            "desc": "为了获得更个性化的体验，请直接联系我们致力于帮助您满足预订需求的团队成员。",
+            "chatWith": "聊天 {{name}}",
+            "role": "预订专家",
+            "messages": {
+                "jaka": "嗨 Jaka，我有兴趣在 Taman Wisata Bougenville 预订",
+                "iis": "嗨 Iis，能否提供有关别墅的更多信息？",
+                "teten": "嗨 Teten，我想查询日期的空房情况..."
+            }
+        }
+    },
+    "faq": {
+        "title": "常见问题",
+        "subtitle": "您需要了解的一切"
+    },
+    "offers": {
+        "title": "定制与体验",
+        "subtitle": "为您量身定制的奢华体验",
+        "validUntil": "有效期至",
+        "bookOffer": "预订此优惠",
+        "designMyEscape": "设计我的假期",
+        "bespoke": {
+            "label": "为您量身打造",
+            "title": "真正的奢华拒绝标准套餐",
+            "description": "我们相信每一次有意义的旅行都不能一概而论。目前，我们不提供大众套餐。相反，我们的礼宾团队邀请您设计专属于您的独家行程，完全切合您的节奏和愿望。",
+            "cta": "联系我们的礼宾部",
+            "features": {
+                "dining": {
+                    "title": "个性化餐饮",
+                    "desc": "从森林深处的私人烧烤到河畔的异国情调早餐，我们帮助打造一场充满努桑塔拉风味的个性化美食之旅。"
+                },
+                "amenities": {
+                    "title": "专属设施",
+                    "desc": "您住宿的每一个细节都会得到无微不至的照顾——从抵达时的装饰、优先通道权到精心策划的浪漫时刻。"
+                },
+                "activities": {
+                    "title": "精心策划的活动",
+                    "desc": "与我们咨询您的度假兴趣，获取专属向导，以更加私密优雅的方式探索松林生态系统和河流。"
+                }
+            }
+        }
+    },
+    "resto": {
+        "title": "餐饮与活动",
+        "subtitle": "品尝正宗巽他美食",
+        "menuTitle": "招牌菜单",
+        "menuDesc": "Bale Puntang 最受欢迎的三道菜 —— 每一道都承载着故事、记忆和餐后久久回味的香气。",
+        "functionTitle": "活动空间",
+        "heroLabel": "农场到餐桌体验",
+        "heroTitle": "餐饮与活动",
+        "heroSubtitle": "Bale Puntang — 山峦与烹饪卓越的交汇处",
+        "story1Label": "氛围",
+        "story1Title": "在清澈的 Cigeureuh 河畔",
+        "story1Desc": "Bale Puntang 将经典木质内饰的温暖与 Puntang 山的凉爽自然融为一体。您可以选择在复古屋顶下的室内享受舒适氛围，或在户外区域呼吸新鲜空气，聆听潺潺流水声。",
+        "story2Label": "风味哲学",
+        "story2Title": "现代手法诠释正宗风味",
+        "story2Desc": "每一道菜——从招牌菜单到辛辣刺激的参巴酱——都由精选的当地食材制成。我们以现代的呈现方式突显正宗风味，在每一盘中讲述丰富的巽他烹饪传统。",
+        "story3Label": "场地与活动",
+        "story3Title": "不仅仅是餐厅",
+        "story3Desc": "Bale Puntang 随时准备成为聚会、会议、社交活动或具有独特风格的小型派对的场所。坐在古董木长凳上，在聊天和创造难忘时刻的同时感受大自然的宁静。",
+        "values": {
+            "organic": "有机",
+            "artisan": "工匠",
+            "local": "本地",
+            "title": "源头新鲜",
+            "desc": "我们相信最好的味道来自大自然本身。我们的蔬菜直接从我们自己的花园采摘，香料来自当地的 Puntang 农民。"
+        }
+    },
+    "reservation": {
+        "hoursTitle": "营业时间",
+        "day": "周一至周日",
+        "reservationTitle": "预订",
+        "locationTitle": "位置"
+    },
+    "cta": {
+        "title": "预订您的餐桌",
+        "subtitle": "建议日落晚餐和特殊场合提前预订",
+        "button": "立即预订",
+        "viewMenu": "查看完整菜单",
+        "discover": "发现山地餐饮的魔力。"
+    },
+    "facility": {
+        "title": "设施与体验",
+        "subtitle": "发现大自然中的各种精彩活动",
+        "experience": "体验",
+        "map": {
+            "title": "探索地图",
+            "desc": "我们的度假村占地超过 5 公顷，拥有郁郁葱葱的景观。请访问我们的前台获取导游地图或探险建议。",
+            "button": "下载度假村地图"
+        },
+        "nav": {
+            "next": "下一步",
+            "gallery": "查看我们的画廊"
+        },
+        "outdoorTitle": "户外活动",
+        "indoorTitle": "室内设施"
+    },
+    "gallery": {
+        "title": "画廊",
+        "subtitle": "探索布根维尔旅游公园的美丽",
+        "categories": {
+            "all": "全部",
+            "villas": "别墅",
+            "nature": "自然",
+            "facilities": "设施",
+            "events": "活动",
+            "dining": "餐饮",
+            "activities": "活动"
+        },
+        "empty": "该类别暂无图片。"
+    },
+    "location": {
+        "title": "我们的位置",
+        "subtitle": "您的山地避难所等待着您，盛开的三角梅和蓬当山的美景尽收眼底。从万隆机场和主要车站可轻松抵达。",
+        "getDirections": "获取路线",
+        "yourJourney": "您的旅程",
+        "travelTimesTitle": "行程时间和路线",
+        "mapSectionLabel": "地图位置",
+        "ourLocation": "我们的位置",
+        "nearbyLabel": "附近景点",
+        "nearbyTitle": "附近景点",
+        "info": {
+            "title": "重要信息",
+            "address": "地址",
+            "gps": "GPS坐标",
+            "road": "路况",
+            "roadDesc": "铺面道路，适合所有车辆（轿车、SUV、中型巴士/Elf）。最后3公里是风景优美的山路。",
+            "signal": "移动信号",
+            "signalDesc": "Telkomsel和XL有很强的4G信号。度假村区提供免费Wi-Fi。",
+            "parking": "停车场",
+            "parkingDesc": "提供宽敞的停车区，适合轿车和中型巴士。",
+            "transport": "公共交通",
+            "transportDesc": "从万隆（Leuwipanjang总站）乘巴士到Banjaran，然后乘Angkot到Cimaung/Puntang。"
+        },
+        "routes": {
+            "airport": {
+                "from": "万隆机场 (Husein Sastranegara)",
+                "via": "Jl. Soekarno-Hatta → Soreang",
+                "time": "45-60 分钟",
+                "distance": "35 公里",
+                "steps": [
+                    "从机场南出口进入 Jl. Husein Sastranegara 往市区方向。",
+                    "汇入 Jl. Soekarno-Hatta 向南，继续前往 Jl. Soreang。",
+                    "经过 Banjaran 镇，按照 Jl. Gunung Puntang 指示牌前往 Campaka Mulya, Cimaung。"
+                ],
+                "note": "预计时间：45-60分钟 | 距离：35公里。铺面道路多弯——注意交通。"
+            },
+            "whoosh": {
+                "from": "Whoosh Padalarang 站",
+                "via": "Tol Padaleunyi → Tol Soroja",
+                "time": "40-50 分钟",
+                "distance": "32 公里",
+                "steps": [
+                    "从车站进入 Tol Padaleunyi 往 Cileunyi/Bandung 方向。",
+                    "从 Tol Soroja (Soreang-Pasir Koja) 出口下。",
+                    "出 Soreang，前往 Banjaran - Cimaung。"
+                ],
+                "note": "经由收费公路的最快路线。适合从雅加达乘坐高铁的游客。"
+            },
+            "station": {
+                "from": "万隆火车站",
+                "via": "Jl. Moh. Toha → Banjaran",
+                "time": "50-70 分钟",
+                "distance": "30 公里",
+                "steps": [
+                    "从车站向南前往 Jl. Oto Iskandar Dinata。",
+                    "继续前往 Jl. Moh. Toha，然后直行至 Banjaran。",
+                    "在 Cimaung 十字路口跟随指示牌前往 Gunung Puntang/Bougenville。"
+                ],
+                "note": "路线穿过城市交通。最好在清晨或傍晚出行。"
+            },
+            "jakarta": {
+                "from": "雅加达 (经由 Tol Soroja)",
+                "via": "Tol Cipularang → Tol Soroja",
+                "time": "2-2.5 小时",
+                "distance": "160 公里",
+                "steps": [
+                    "走 Tol Cipularang 往万隆方向。",
+                    "在 Pasir Koja 枢纽汇入 Tol Soroja (Soreang-Pasir Koja)。",
+                    "出 Soreang（收费公路终点），右转至 Banjaran，直行至 Cimaung。"
+                ],
+                "note": "直接收费公路通道使旅程顺畅。出 Soreang 距离度假村仅30-40分钟。"
+            },
+            "city": {
+                "from": "万隆市中心",
+                "via": "Jl. Moh. Toha → Dayeuhkolot",
+                "time": "50-60 分钟",
+                "distance": "28 公里",
+                "steps": [
+                    "经 Dayeuhkolot 区域沿 Jl. Moh. Toha 向南。",
+                    "继续直行至 Banjaran 市场十字路口。",
+                    "继续直行往 Pangalengan 方向，左转前往 Gunung Puntang。"
+                ],
+                "note": "标准路线。Dayeuhkolot 周围的高峰时段可能会很拥堵。"
+            }
+        }
+    },
+    "blog": {
+        "title": "博客与新闻",
+        "subtitle": "故事、技巧和灵感",
+        "readMore": "阅读更多",
+        "recentPosts": "最新文章"
+    },
+    "membership": {
+        "heroLabel": "私人通道",
+        "heroTitle": "Bougenville Circle",
+        "heroSubtitle": "一个为欣赏自然宁静和真正奢华的人士打造的独家圈子。",
+        "invitationTitle": "尊贵邀请",
+        "invitationDesc": "Bougenville Circle 不仅仅是一个会员资格，它是通往 Taman Wisata Bougenville 个性化体验的钥匙。我们邀请您成为我们故事的一部分。",
+        "privilege1Title": "优先使用权",
+        "privilege1Desc": "第一时间获知热门日期的别墅空房情况和私人活动邀请。",
+        "privilege2Title": "特别优惠",
+        "privilege2Desc": "享受住宿优惠价格和抵达时的特别礼遇。",
+        "privilege3Title": "个性化服务",
+        "privilege3Desc": "我们的礼宾团队将识别您的偏好，确保您的每次访问都有回家的感觉。",
+        "joinNow": "申请加入",
+        "ctaTitle": "加入 Bougenville Circle",
+        "ctaDesc": "成为我们家庭的一员，开启您在大自然中的奢华之旅。",
+        "contactUs": "联系我们",
+        "collectionLabel": "私人收藏系列",
+        "formTitle": "入会申请",
+        "formHeading": "申请加入",
+        "formSubtitle": "加入自然爱好者的社区。本季名额有限。",
+        "submit": "提交申请",
+        "city": "城市 / 居住地",
+        "villaPreference": "首选别墅",
+        "occasion": "访问目的",
+        "placeholders": {
+            "name": "输入您的姓名",
+            "email": "email@example.com",
+            "phone": "+62",
+            "city": "例如：雅加达、万隆、新加坡"
+        },
+        "occasionOptions": {
+            "family": "家庭度假",
+            "honeymoon": "蜜月 / 伴侣",
+            "corporate": "企业活动",
+            "wellness": "健康静修",
+            "other": "其他"
+        }
+    },
+    "seo": {
+        "homeTitle": "布根维尔旅游公园 | 专属山林度假胜地",
+        "homeDescription": "在布根维尔旅游公园体验大自然的宁静。豪华别墅、正宗巽他美食和泰山户外探险。",
+        "villasPage": {
+            "all": {
+                "title": "万隆别墅 | 布根维尔旅游公园 - 家庭和团体别墅出租",
+                "description": "万隆家庭和团体别墅出租。位于泰山的家庭别墅、豪华别墅和情侣别墅的完整选择。",
+                "keywords": "万隆别墅, 万隆家庭别墅, 万隆团体别墅, 万隆别墅出租, 万隆聚会别墅"
+            },
+            "luxury": {
+                "title": "万隆豪华别墅 | 布根维尔旅游公园 - 高级豪华系列",
+                "description": "万隆豪华别墅，配备一流设施。在泰山租用豪华家庭别墅进行独家聚会。Forest House, Mooi Lake 和最佳豪华系列。",
+                "keywords": "万隆豪华别墅, 豪华家庭别墅, 租用豪华别墅, 万隆高级别墅, 万隆独家别墅"
+            },
+            "log_home": {
+                "title": "万隆家庭别墅 | 布根维尔旅游公园 - 原木小屋与自然旅馆",
+                "description": "万隆原木小屋风格的家庭别墅。位于泰山的具有正宗木质氛围的自然旅馆。租用别墅进行家庭聚会。",
+                "keywords": "万隆家庭别墅, 万隆住宿, 租用万隆别墅, 万隆木制别墅, 万隆原木小屋, 自然别墅"
+            },
+            "couple": {
+                "title": "万隆情侣别墅 | 布根维尔旅游公园 - 浪漫小屋度假",
+                "description": "万隆情侣别墅，适合浪漫蜜月。位于泰山的私密情侣小屋别墅。最佳蜜月和浪漫度假套餐。",
+                "keywords": "万隆小屋别墅, 万隆情侣别墅, 万隆浪漫别墅, 万隆蜜月别墅, 情侣度假"
+            }
+        },
+        "villasTitle": "豪华别墅 - 布根维尔旅游公园",
+        "villasDescription": "从我们的专属别墅系列中选择,配有私人泳池、山景和高端设施。",
+        "restoTitle": "餐饮与活动 - 布根维尔旅游公园",
+        "restoDescription": "享受正宗巽他美食,在我们的宴会厅举办您的特别活动。",
+        "facilityTitle": "设施与体验 - 布根维尔旅游公园",
+        "facilityDescription": "探索各种户外和室内活动,享受完美的度假体验."
+    },
+    "villas": {
+        "exploreCluster": "探索集群",
+        "cluster": "集群",
+        "singleUnit": "单体建筑"
+    },
+    "common": {
+        "learnMore": "了解更多",
+        "close": "关闭",
+        "previous": "上一个",
+        "next": "下一个",
+        "loading": "加载中...",
+        "error": "发生错误",
+        "tryAgain": "重试",
+        "success": "成功!",
+        "required": "必填",
+        "save": "保存",
+        "saved": "已保存",
+        "share": "分享",
+        "copied": "链接已复制！",
+        "perNight": "/ 晚",
+        "reviews": "评价"
+    },
+    "sustainability": {
+        "seo": {
+            "title": "可持续发展 | Taman Wisata Bougenville",
+            "description": "我们致力于普塘山的自然保护、社区赋权和环保实践。",
+            "keywords": "万隆生态度假村, 印尼可持续旅游, 普塘自然保护"
+        },
+        "hero": {
+            "label": "我们的承诺",
+            "title": "与自然和谐共处",
+            "description": "我们不仅仅存在于自然中；我们是自然的一部分。我们的使命是为子孙后代保护普塘山的美丽。"
+        },
+        "message": {
+            "quote": "除了脚印什么都别留下，除了照片什么都别带走。",
+            "body": "在 Taman Wisata Bougenville，奢华与可持续发展是并行的。我们相信真正的待客之道意味着关爱我们的客人和我们的家园——地球。从保护 Cigeureuh 河到赋能当地巽他社区，我们所做的每一个决定都植根于对环境的尊重。"
+        },
+        "pillars": {
+            "label": "核心支柱",
+            "title": "我们的可持续发展方针",
+            "conservation": {
+                "title": "森林保护",
+                "desc": "我们积极保护超过 5 公顷的松林和原生植被，为爪哇鹰等当地生物多样性提供安全的栖息地。"
+            },
+            "water": {
+                "title": "水资源管理",
+                "desc": "Cigeureuh 河是我们的生命线。我们在水道附近实施严格的“无化学品”区域，并对所有废水进行生物处理。"
+            },
+            "waste": {
+                "title": "负责任的废物管理",
+                "desc": "我们的目标是零废物填埋。有机废物被堆肥用于我们的花园，可回收物由当地合作伙伴处理。"
+            },
+            "community": {
+                "title": "社区赋权",
+                "desc": "超过 80% 的员工来自当地村庄。我们的厨房和装饰需求优先考虑当地农民和工匠。"
+            }
+        },
+        "plastic": {
+            "label": "绿色倡议",
+            "title": "迈向无塑料",
+            "description": "我们正在整个度假村逐步淘汰一次性塑料，以减少我们的环境足迹。",
+            "item1": "玻璃瓶和过滤水站",
+            "item2": "竹制和玉米淀粉用品"
+        }
+    },
+    "sticky": {
+        "checkAvailability": "检查可用性",
+        "bookNow": "立即预订",
+        "whatsappMessage": "您好！我想在布根维尔旅游公园预订。"
+    },
+    "bookingPage": {
+        "seo": {
+            "title": "预订 | 布根维尔旅游公园",
+            "description": "在布根维尔旅游公园预订您的专属别墅。通过WhatsApp或您喜爱的OTA平台直接预订。"
+        },
+        "heroTitle": "预订您的别墅",
+        "heroSubtitle": "轻松预订您在布根维尔旅游公园的梦想别墅",
+        "trust": {
+            "rating": "4.9/5 客人评分",
+            "secure": "安全预订",
+            "response": "1小时内回复",
+            "guests": "5000+ 满意客人"
+        },
+        "methodsLabel": "预订方式",
+        "methodsTitle": "选择您的预订方式",
+        "methodsDesc": "我们提供多种预订方式供您选择。通过WhatsApp直接预订获得个性化服务，或使用您喜爱的OTA平台。",
+        "recommended": "推荐",
+        "whatsappTitle": "通过WhatsApp直接预订",
+        "whatsappDesc": "从我们的预订团队获得个性化服务。讨论您的需求并获得最佳优惠。",
+        "whatsappMessage": "您好，我有兴趣在布根维尔旅游公园预订别墅。我在您的网站上看到了信息。",
+        "chatNow": "立即聊天",
+        "responseTime": "平均回复时间：1小时内（08:00 - 21:00 WIB）",
+        "specialists": {
+            "subtitle": "预订团队",
+            "title": "联系我们的专家",
+            "desc": "我们的预订团队随时为您找到适合您需求的完美别墅。",
+            "role": "预订专家",
+            "chatWith": "联系 {{name}}",
+            "messages": {
+                "jaka": "嗨 Jaka，我有兴趣在布根维尔旅游公园预订。我在网站上看到了信息。",
+                "iis": "嗨 Iis，我想咨询别墅的空房情况。我看了你们的网站。",
+                "teten": "嗨 Teten，我想查询特定日期的别墅空房情况。信息来自网站。"
+            }
+        },
+        "otaLabel": "合作平台",
+        "otaTitle": "通过OTA平台预订",
+        "otaDesc": "在您喜爱的在线旅游平台上找到我们，方便比较价格和付款。",
+        "viewOn": "查看",
+        "otaNote": "各平台价格可能有所不同。直接联系我们获得最佳优惠。",
+        "whyDirectLabel": "优势",
+        "whyDirectTitle": "为什么直接预订？",
+        "benefit1": {
+            "title": "最优价格保证",
+            "desc": "获得其他平台没有的特别价格和独家优惠。"
+        },
+        "benefit2": {
+            "title": "最大灵活性",
+            "desc": "更灵活的取消政策和轻松的日程更改。"
+        },
+        "benefit3": {
+            "title": "个性化服务",
+            "desc": "直接与我们的团队沟通，定制您的住宿体验。"
+        },
+        "villasLabel": "选择别墅",
+        "villasTitle": "我们的别墅系列",
+        "payment": {
+            "label": "支付方式",
+            "title": "简单安全的支付",
+            "desc": "我们接受多种支付方式，为您提供便利。",
+            "transfer": "银行转账",
+            "ewallet": "电子钱包",
+            "card": "信用卡",
+            "qris": "QRIS",
+            "note": "付款需在我们团队确认预订后进行。"
+        },
+        "ctaTitle": "准备预订？",
+        "ctaDesc": "我们的预订团队随时为您规划在布根维尔旅游公园的梦想假期。",
+        "ctaButton": "立即联系我们"
+    },
+    "terms": {
+        "title": "服务条款",
+        "subtitle": "我们服务的条款和条件",
+        "lastUpdated": "最后更新",
+        "sections": [
+            {
+                "title": "1. 一般条款",
+                "content": "<p>访问和使用 Taman Wisata Bougenville 网站及服务，即表示您同意遵守这些条款和条件。如果您不同意这些条款的任何部分，请不要使用我们的服务。</p>"
+            },
+            {
+                "title": "2. 预订与付款",
+                "content": "<ul><li>所有预订均视房间/别墅供应情况而定。</li><li>可能需要支付定金以锁定您的预订。</li><li>全额付款必须按照预订确认时的指示完成。</li><li>价格如有更改，恕不另行通知，但不会影响已确认的预订。</li></ul>"
+            },
+            {
+                "title": "3. 取消与退款",
+                "content": "<ul><li>取消政策因预订的房价计划和促销活动而异。具体详情请参阅您的预订确认信息。</li><li>在抵达前特定时间内取消预订可能会产生取消费用。</li><li>退款（如适用）将在合理的时间内通过原付款方式处理。</li></ul>"
+            },
+            {
+                "title": "4. 住客规则",
+                "content": "<ul><li>为了其他客人的舒适，住客必须保持秩序和安静。</li><li>严禁在度假村内进行非法活动、携带违禁药物或危险武器。</li><li>由住客造成的财产损失将收取赔偿费用。</li><li>入住时间为 14:00 WIB，退房时间为 12:00 WIB，除非另有约定。</li></ul>"
+            },
+            {
+                "title": "5. 责任",
+                "content": "<p>Taman Wisata Bougenville 对未存放在保险箱（如有）中的贵重物品丢失或损坏，或因住客疏忽造成的损失概不负责。我们也对因住客疏忽或违反度假村安全规定造成的伤害不承担责任。</p>"
+            },
+            {
+                "title": "6. 适用法律",
+                "content": "<p>这些条款和条件受印度尼西亚共和国法律管辖并据其解释。任何争议均应在印度尼西亚法院管辖范围内解决。</p>"
+            }
+        ]
+    },
+    "privacy": {
+        "title": "隐私政策",
+        "subtitle": "我们致力于保护您的数据",
+        "lastUpdated": "最后更新",
+        "intro": {
+            "title": "1. 简介",
+            "content": "<p>欢迎来到 Taman Wisata Bougenville。我们重视您的隐私，并致力于保护您的个人信息。本隐私政策解释了当您访问我们的网站或使用我们的服务时，我们如何收集、使用和保护您的信息。</p>"
+        },
+        "collection": {
+            "title": "2. 我们收集的信息",
+            "content": "<p>我们可能会收集以下信息：</p><ul><li><strong>个人信息：</strong> 您在预订或联系我们时提供的姓名、电子邮件地址、电话号码和其他身份信息。</li><li><strong>预订信息：</strong> 入住日期、房间偏好和特殊要求。</li><li><strong>技术信息：</strong> IP 地址、浏览器类型和网站使用数据 (cookies) 以改善用户体验。</li></ul>"
+        },
+        "use": {
+            "title": "3. 信息的使用",
+            "content": "<p>我们将您的信息用于：</p><ul><li>处理您的预订和付款。</li><li>这就预订确认或服务变更与您联系。</li><li>发送促销信息或时事通讯（如果您已选择接收）。</li><li>提高我们的服务和网站质量。</li></ul>"
+        },
+        "protection": {
+            "title": "4. 数据保护",
+            "content": "<p>我们采取适当的技术和组织安全措施，以保护您的个人数据免遭未经授权的访问、滥用、丢失或损坏。</p>"
+        },
+        "sharing": {
+            "title": "5. 信息共享",
+            "content": "<p>我们不会将您的个人信息出售或出租给第三方。我们仅在法律要求或与协助我们运营的第三方服务提供商（例如付款处理）共享信息时，才会在严格的保密义务下共享信息。</p>"
+        },
+        "contact": {
+            "title": "6. 联系我们",
+            "content": "<p>如果您对本隐私政策有任何疑问，请联系我们：<br />电子邮件: booking@tamanwisatabougenville.com<br />电话: +62 811 910 2003</p>"
+        }
+    }
+}

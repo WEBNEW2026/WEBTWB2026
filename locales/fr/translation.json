@@ -1,0 +1,718 @@
+{
+    "nav": {
+        "home": "Accueil",
+        "villas": "Villas",
+        "resto": "Restaurant",
+        "facility": "Installations",
+        "gallery": "Galerie",
+        "offers": "Offres",
+        "membership": "Adhésion",
+        "about": "À propos",
+        "contact": "Contact",
+        "location": "Localisation",
+        "faq": "FAQ",
+        "blog": "Blog",
+        "bookNow": "Réserver"
+    },
+    "home": {
+        "hero": {
+            "headline": "Une Escapade Montagnarde Exclusive",
+            "subheadline": "À seulement deux heures de Jakarta, découvrez la sérénité dans un luxe authentique",
+            "cta": "Réserver",
+            "trust": "Depuis 2018 · 28 Villas Exclusives",
+            "scroll": "Défiler"
+        },
+        "whatsapp": {
+            "inquiry": "Bonjour, je souhaiterais réserver une villa"
+        },
+        "seo": {
+            "title": "Taman Wisata Bougenville | Resort de Montagne Luxueux à Bandung",
+            "description": "Vivez le luxe en pleine nature à Taman Wisata Bougenville. Villas privées exclusives, cuisine Nusantara authentique et expériences naturelles sur le Mont Puntang, Bandung.",
+            "keywords": "villa bandung, resort montagne puntang, glamping luxe bandung, séjour famille bandung, villa lune de miel java ouest"
+        },
+        "location": "Mont Puntang, Bandung",
+        "welcomeTitle": "Bienvenue à Taman Wisata Bougenville",
+        "welcomeDesc": "Découvrez la sérénité dans l'étreinte de la nature du Mont Puntang. Nos villas exclusives sont conçues pour offrir une expérience de vacances inoubliable, à seulement 2 heures de Jakarta.",
+        "featuredVillasLabel": "Hébergements",
+        "featuredVillasTitle": "Villas en Vedette",
+        "viewAllVillas": "Voir Toutes les Villas",
+        "experiencesTitle": "Là Où Chaque Moment Devient une Aventure",
+        "fromPrice": "À partir de",
+        "viewDetails": "Voir les Détails",
+        "guestLabel": "{{count}} Hôte",
+        "guestLabel_plural": "{{count}} Hôtes",
+        "mountainView": "Vue sur la Montagne"
+    },
+    "experiences": {
+        "nature": "Découverte de la Nature",
+        "natureDesc": "Découvrez la beauté intacte et la nature fraîche de Bougenville",
+        "picnic": "Pique-nique en Famille",
+        "picnicDesc": "Créez des souvenirs inoubliables",
+        "waterfall": "Randonnée Cascade",
+        "waterfallDesc": "L'aventure vous attend",
+        "stargazing": "Observation des Étoiles",
+        "stargazingDesc": "Sous un million d'étoiles"
+    },
+    "footer": {
+        "tagline": "Un sanctuaire de montagne luxueux ancré dans le patrimoine de Nagara Puntang. Reconnectez-vous à la nature dans sa forme la plus pure.",
+        "exploreTitle": "Explorer",
+        "infoTitle": "Informations",
+        "contactTitle": "Contact",
+        "newsletterTitle": "Newsletter",
+        "newsletterDesc": "Rejoignez notre liste exclusive pour les mises à jour et offres spéciales.",
+        "newsletterPlaceholder": "Votre Adresse E-mail",
+        "subscribe": "S'abonner",
+        "privacyPolicy": "Politique de Confidentialité",
+        "termsOfService": "Conditions d'Utilisation",
+        "selectVilla": "Sélectionner une Villa",
+        "submit": "Soumettre la Demande",
+        "whatsappBooking": "Réserver via WhatsApp",
+        "copyright": "© 2025 Taman Wisata Bougenville. Tous droits réservés.",
+        "reception": "Réception",
+        "inquiries": "Renseignements",
+        "visitUs": "Nous Rendre Visite"
+    },
+    "trust": {
+        "reviews": "Avis 5 Étoiles",
+        "guests": "Hôtes Satisfaits",
+        "featured": "Présenté Dans",
+        "media": "KOMPAS · DETIK"
+    },
+    "about": {
+        "title": "À Propos de Nous",
+        "subtitle": "Le Patrimoine Naturel Rencontre le Luxe",
+        "story": "Notre Histoire",
+        "mission": "Notre Mission",
+        "values": "Nos Valeurs",
+        "philosophyLabel": "Notre Philosophie",
+        "philosophyTitle": "Retour à la Vraie Nature",
+        "philosophyDesc1": "Au milieu de l'agitation de la vie moderne, Taman Wisata Bougenville existe comme une escapade exclusive à seulement 2 heures de Jakarta. Nous croyons que le vrai luxe ne réside pas dans la grandeur artificielle, mais dans l'intimité avec la nature, le silence précieux et les moments de qualité avec ses proches.",
+        "philosophyDesc2": "Chaque recoin de Bougenville est conçu pour vous rapprocher de la nature, de votre famille et de vous-même. Découvrez le luxe authentique au milieu des forêts de pins ancestrales au pied du Mont Puntang.",
+        "valuesLabel": "Nos Valeurs",
+        "valuesTitle": "Nos Valeurs",
+        "valueHeritageTitle": "Patrimoine",
+        "valueHeritageDesc": "Préserver l'esprit du Royaume de Nagara Puntang à travers une architecture respectueuse de la nature et une hospitalité sundanaise sincère.",
+        "valueSustainabilityTitle": "Durabilité",
+        "valueSustainabilityDesc": "Nous nous engageons dans des pratiques responsables et écologiques — préservant la beauté naturelle de Gunung Puntang comme héritage pour les générations futures.",
+        "valueAuthenticityTitle": "Authenticité",
+        "valueAuthenticityDesc": "Une expérience sincère, sans prétention. De l'accueil chaleureux de notre personnel aux détails des intérieurs en teck massif.",
+        "valueCommunityTitle": "Communauté",
+        "valueCommunityDesc": "Autonomiser la communauté locale grâce à la formation à l'hospitalité et aux partenariats avec les agriculteurs environnants.",
+        "historyLabel": "Histoire & Tradition",
+        "historyTitle": "Patrimoine de Nagara Puntang",
+        "historyDesc1": "Il y a des siècles, le Royaume de \"Nagara Puntang\" se dressait majestueusement sur cette terre. Un royaume connu pour son harmonie avec la nature et sa sagesse dans la gestion des ressources montagnardes.",
+        "historyDesc2": "Nous maintenons cet esprit vivant à travers une architecture respectueuse de la nature et une hospitalité sundanaise sincère. Chaque villa est conçue avec la philosophie de \"se fondre dans la nature sans la modifier\" — une philosophie pratiquée par nos ancêtres depuis des centaines d'années.",
+        "historyDesc3": "Le Mont Puntang n'est pas qu'un lieu. C'est un témoin de l'histoire, un gardien de la tradition et le foyer de générations qui prennent soin de cette ancienne forêt de pins de tout leur cœur.",
+        "responsibilityLabel": "Notre Responsabilité",
+        "responsibilityTitle": "Notre Engagement envers la Nature",
+        "responsibilityDesc": "En tant que resort au cœur des montagnes, nous avons la responsabilité de protéger l'écosystème qui soutient cette beauté. Bougenville adhère au principe \"ne laisser aucune trace\" et est pleinement engagé dans la préservation de la nature.",
+        "statRenewable": "Énergie Renouvelable",
+        "statWaste": "Politique des Déchets",
+        "statCommunity": "Communauté d'abord",
+        "ctaTitle": "Commencez Votre Voyage",
+        "ctaDesc": "Nous vous invitons à faire partie de notre histoire. Réservez votre séjour aujourd'hui.",
+        "stats": {
+            "zero": "Zéro",
+            "local": "Local"
+        }
+    },
+    "contact": {
+        "title": "Nous Contacter",
+        "subtitle": "Nous Sommes Là pour Vous Aider",
+        "name": "Nom",
+        "email": "E-mail",
+        "phone": "Téléphone",
+        "message": "Message",
+        "send": "Envoyer le Message",
+        "address": "Jl. Gn. Puntang, Bandung, Java Occidental",
+        "openHours": "Lundi - Dimanche : 08h00 - 20h00",
+        "contactLabel": "Contactez-Nous",
+        "contactTitle": "Contacter Notre Équipe",
+        "chatNow": "Chatter Maintenant",
+        "sendEmail": "Envoyer un E-mail",
+        "formLabel": "Message & Questions",
+        "form": {
+            "fullName": "Nom Complet",
+            "emailAddress": "Adresse E-mail",
+            "phone": "Numéro de Téléphone",
+            "checkIn": "Date d'Arrivée Souhaitée",
+            "checkOut": "Date de Départ Souhaitée",
+            "messageLabel": "Message",
+            "sending": "Envoi en cours...",
+            "submit": "Envoyer le Message",
+            "success": "Merci ! Votre message a été envoyé avec succès.",
+            "placeholders": {
+                "name": "Jean Dupont",
+                "email": "jean@example.com",
+                "phone": "+33 6 12 34 56 78",
+                "message": "Dites-nous en quoi vous avez besoin d'aide..."
+            },
+            "validation": {
+                "nameRequired": "Le nom est requis",
+                "emailRequired": "L'e-mail est requis",
+                "emailInvalid": "Format d'e-mail invalide",
+                "phoneRequired": "Le numéro de téléphone est requis",
+                "phoneInvalid": "Numéro de téléphone invalide",
+                "messageRequired": "Le message est requis"
+            }
+        },
+        "locationLabel": "Notre Localisation",
+        "faqTitle": "Vous Avez des Questions ?",
+        "faqDesc": "Consultez notre foire aux questions pour des réponses rapides sur les réservations, les installations et les politiques.",
+        "viewFaq": "Voir la FAQ",
+        "specialists": {
+            "title": "Rencontrez Nos Spécialistes en Réservation",
+            "subtitle": "Assistance Personnelle",
+            "desc": "Pour une expérience plus personnelle, contactez directement nos membres dédiés qui peuvent vous aider avec vos besoins de réservation.",
+            "chatWith": "Chatter avec {{name}}",
+            "role": "Spécialiste en Réservation",
+            "messages": {
+                "jaka": "Bonjour Jaka, je souhaite faire une réservation à Taman Wisata Bougenville",
+                "iis": "Bonjour Iis, pourriez-vous me donner plus d'informations sur les villas ?",
+                "teten": "Bonjour Teten, je voudrais vérifier les disponibilités pour les dates..."
+            }
+        }
+    },
+    "faq": {
+        "title": "Foire Aux Questions",
+        "subtitle": "Tout Ce Que Vous Devez Savoir",
+        "sections": {
+            "booking": "Réservations",
+            "checkin": "Arrivée & Départ",
+            "policy": "Politiques & Règles",
+            "transport": "Transport & Directions",
+            "facilities": "Installations & Équipements"
+        },
+        "stillHaveQuestions": {
+            "title": "Vous Avez Encore des Questions ?",
+            "desc": "Notre équipe sympathique est là pour vous aider. Contactez-nous via WhatsApp, téléphone ou e-mail et nous vous répondrons dans les 24 heures."
+        }
+    },
+    "offers": {
+        "title": "Sur Mesure & Expériences",
+        "subtitle": "Le luxe soigneusement personnalisé pour vous",
+        "validUntil": "Valable jusqu'au",
+        "bookOffer": "Réserver Cette Offre",
+        "designMyEscape": "Concevoir Mon Escapade",
+        "bespoke": {
+            "label": "Conçu Rien que Pour Vous",
+            "title": "Le Vrai Luxe Défie les Packages Standard",
+            "description": "Nous croyons que chaque voyage significatif ne peut être généralisé. Actuellement, nous n'offrons pas de forfaits génériques. À la place, notre équipe de conciergerie vous invite à concevoir un itinéraire exclusif entièrement adapté à votre rythme et à vos désirs.",
+            "cta": "Contacter Notre Conciergerie",
+            "features": {
+                "dining": {
+                    "title": "Restauration Personnalisée",
+                    "desc": "D'un BBQ privé au milieu de la forêt à un petit-déjeuner exotique au bord de la rivière, nous vous aidons à créer un voyage culinaire personnalisé riche en saveurs Nusantara."
+                },
+                "amenities": {
+                    "title": "Équipements Exclusifs",
+                    "desc": "Chaque détail de votre séjour sera méticuleusement soigné — des décorations à l'arrivée et accès prioritaire aux moments romantiques soigneusement sélectionnés."
+                },
+                "activities": {
+                    "title": "Activités Sélectionnées",
+                    "desc": "Consultez vos intérêts de vacances avec nous et obtenez un guide spécial pour explorer l'écosystème de la forêt de pins et la rivière de manière plus privée et élégante."
+                }
+            }
+        }
+    },
+    "resto": {
+        "title": "Restaurant & Fonction",
+        "subtitle": "Les saveurs Nusantara, sublimées par la sérénité du Mont Puntang",
+        "menuTitle": "Plats Signature",
+        "menuDesc": "Trois plats les plus appréciés au Bale Puntang — chacun portant une histoire, un souvenir et une saveur qui dure longtemps après le repas.",
+        "functionTitle": "Salles de Fonction",
+        "heroLabel": "Cuisine Nusantara",
+        "heroTitle": "Restaurant Bale Puntang",
+        "heroSubtitle": "Une expérience gastronomique qui transcende l'ordinaire — la profondeur de l'âme culinaire de Nusantara, face à la majesté tranquille du Mont Puntang",
+        "story1Label": "Le Cadre",
+        "story1Title": "Une Table Dressée au Bord de la Rivière Cigeureuh",
+        "story1Desc": "Bale Puntang place votre table au cœur même de la nature — à côté du doux murmure de la rivière Cigeureuh, sous une canopée de pins de Puntang. Choisissez la chaleur de notre intérieur en bois intime ou cédez à la terrasse ouverte où la brise de montagne fait partie de l'expérience. Ici, le cadre n'est pas le décor — c'est le repas lui-même.",
+        "story2Label": "Notre Philosophie",
+        "story2Title": "Honnête dans Chaque Plat",
+        "story2Desc": "Nous ne suivons pas les tendances — nous honorons l'héritage. Du Soto Bandung clair et réconfortant au Gurame Terbang glorieusement croustillant, chaque assiette au Bale Puntang est un acte de dévotion à la richesse culinaire indonésienne — cuisiné avec sincérité, servi avec une fierté tranquille.",
+        "story3Label": "Lieu & Rassemblement",
+        "story3Title": "Un Espace pour des Rassemblements Significatifs",
+        "story3Desc": "Bale Puntang est l'endroit où les célébrations trouvent leur écrin. Étapes familiales, retraites d'entreprise exclusives, occasions intimes — tout a sa place ici. Laissez le ciel de montagne et le son de l'eau qui coule témoigner de vos plus beaux moments.",
+        "values": {
+            "organic": "Nusantara",
+            "artisan": "Artisanal",
+            "local": "Sincère",
+            "title": "Un Patrimoine Gastronomique Inégalé",
+            "desc": "Au Bale Puntang, la grande gastronomie n'est pas une question de spectacle. C'est une question d'honnêteté — la tradition culinaire Nusantara transmise à travers les générations, portée à votre table avec une fierté tranquille et une révérence profonde, au milieu de la beauté incomparable de Gunung Puntang."
+        },
+        "reservation": {
+            "hoursTitle": "Horaires d'Ouverture",
+            "day": "Lundi – Dimanche",
+            "reservationTitle": "Réservation",
+            "locationTitle": "Localisation"
+        },
+        "cta": {
+            "title": "Permettez-nous de Vous Accueillir",
+            "subtitle": "Réservez votre table et découvrez la vraie profondeur de la cuisine Nusantara, high above the valleys of Puntang",
+            "button": "Réserver une Table",
+            "viewMenu": "Voir le Menu Complet",
+            "discover": "La meilleure cuisine Nusantara, sublimée."
+        }
+    },
+    "facility": {
+        "title": "Installations & Expériences",
+        "subtitle": "Découvrez diverses activités passionnantes dans la nature",
+        "experience": "EXPÉRIENCE",
+        "map": {
+            "title": "Explorer la Carte",
+            "desc": "Notre resort s'étend sur plus de 5 hectares de paysage luxuriant. Visitez notre réception pour une carte guidée ou des recommandations d'aventures.",
+            "button": "Télécharger la Carte du Resort"
+        },
+        "nav": {
+            "next": "Suivant",
+            "gallery": "Voir Notre Galerie"
+        },
+        "outdoorTitle": "Activités Extérieures",
+        "indoorTitle": "Installations Intérieures"
+    },
+    "gallery": {
+        "title": "Galerie",
+        "subtitle": "Explorez la Beauté de Taman Wisata Bougenville",
+        "categories": {
+            "all": "Tout",
+            "villas": "Villas",
+            "nature": "Nature",
+            "facilities": "Installations",
+            "events": "Événements",
+            "dining": "Restaurant",
+            "activities": "Activités"
+        },
+        "empty": "Pas encore d'images dans cette catégorie."
+    },
+    "location": {
+        "title": "Nous Trouver",
+        "subtitle": "Une escapade exclusive enveloppée par la nature. Caché sur les pentes verdoyantes du Mont Puntang, Taman Wisata Bougenville offre un sanctuaire inoubliable avec une accessibilité aisée depuis les principaux hubs de transit de la ville.",
+        "getDirections": "Obtenir l'Itinéraire",
+        "yourJourney": "Votre Voyage",
+        "travelTimesTitle": "Itinéraires & Durées de Trajet",
+        "mapSectionLabel": "Carte Interactive",
+        "ourLocation": "Notre Localisation",
+        "nearbyLabel": "Explorer les Environs",
+        "nearbyTitle": "Attractions à Proximité",
+        "info": {
+            "title": "Informations Essentielles",
+            "address": "Adresse Complète",
+            "gps": "Coordonnées GPS",
+            "road": "Accès Routier",
+            "roadDesc": "Routes goudronnées et sécurisées adaptées à tous les véhicules, des berlines aux bus de taille moyenne. Profitez d'une belle ouverture de panorama montagnard lors des 3 derniers kilomètres jusqu'au resort.",
+            "signal": "Connectivité Mobile",
+            "signalDesc": "Excellente couverture 4G (Telkomsel et XL). Le Wi-Fi haut débit gratuit est disponible dans tout le resort pour vous garder connecté en toutes circonstances.",
+            "parking": "Installations de Stationnement",
+            "parkingDesc": "Grand parking privé bien organisé, soigneusement gardé par notre équipe de sécurité 24h/24.",
+            "transport": "Transport",
+            "transportDesc": "Voyage sans effort depuis le centre-ville. Nous recommandons fortement les voitures privées ou les services de covoiturage pour le maximum de confort. Les options de transit local sont également disponibles."
+        },
+        "routes": {
+            "airport": {
+                "from": "Aéroport Husein Sastranegara (BDO)",
+                "via": "Via l'Autoroute Soroja",
+                "time": "45-60 Min",
+                "distance": "35 km",
+                "steps": [
+                    "Quittez l'aéroport en direction du péage Pasteur ou Pasir Koja.",
+                    "Entrez sur l'autoroute Soroja pour contourner complètement la circulation urbaine.",
+                    "Sortez à Soreang, tournez à gauche vers Banjaran et suivez la route panoramique vers le Mont Puntang."
+                ],
+                "note": "Itinéraire très recommandé. Une agréable conduite sur autoroute culminant par une brise de montagne accueillante."
+            },
+            "whoosh": {
+                "from": "Train à Grande Vitesse Whoosh (Padalarang)",
+                "via": "Via l'Autoroute Soroja",
+                "time": "40-50 Min",
+                "distance": "32 km",
+                "steps": [
+                    "Depuis la gare, connectez-vous en toute fluidité à l'autoroute Padaleunyi en direction de Bandung.",
+                    "Transitez vers l'autoroute Soroja (Soreang-Pasir Koja).",
+                    "Sortez à Soreang et continuez sur la route principale vers Cimaung."
+                ],
+                "note": "L'option la plus rapide et la plus raffinée pour les clients arrivant de Jakarta via le Train à Grande Vitesse."
+            },
+            "station": {
+                "from": "Gare Principale de Bandung",
+                "via": "Via Moh. Toha",
+                "time": "50-70 Min",
+                "distance": "30 km",
+                "steps": [
+                    "Dirigez-vous vers le sud depuis la gare vers l'accès à l'autoroute Moh. Toha.",
+                    "Choisissez entre les rues de la ville ou l'autoroute vers Soreang.",
+                    "En atteignant le carrefour de Cimaung, l'air frais de la montagne commence à vous accueillir."
+                ],
+                "note": "Cet itinéraire traverse le cœur de la ville. Nous suggérons de voyager en dehors des heures de pointe pour une conduite plus détendue."
+            },
+            "jakarta": {
+                "from": "Voyage depuis Jakarta",
+                "via": "Via Cipularang & Autoroute Soroja",
+                "time": "2-2,5 Heures",
+                "distance": "160 km",
+                "steps": [
+                    "Profitez d'une conduite directe via l'autoroute Cipularang vers Bandung.",
+                    "Transitez en douceur vers l'autoroute Soroja à l'échangeur Pasir Koja, évitant les embouteillages de la ville.",
+                    "En sortant de Soreang, notre retraite de montagne exclusive n'est qu'à 30 minutes de route panoramique."
+                ],
+                "note": "Un voyage autoroutier ininterrompu offrant une efficacité maximale de la capitale à la tranquillité de la nature."
+            },
+            "city": {
+                "from": "Centre-Ville de Bandung",
+                "via": "Via l'Accès Principal Sud",
+                "time": "50-60 Min",
+                "distance": "28 km",
+                "steps": [
+                    "Naviguez vers le sud à travers Moh. Toha ou le quartier Dayeuhkolot.",
+                    "Continuez tout droit à travers l'animée place de Banjaran.",
+                    "Dirigez-vous vers Pangalengan, en tournant à gauche pour monter le Mont Puntang."
+                ],
+                "note": "Un itinéraire classique pour ceux qui souhaitent expérimenter le rythme dynamique de la ville avant de se retirer dans le silence absolu."
+            }
+        }
+    },
+    "blog": {
+        "title": "Blog & Actualités",
+        "subtitle": "Histoires, Conseils et Inspiration",
+        "readMore": "Lire Plus",
+        "recentPosts": "Articles Récents"
+    },
+    "membership": {
+        "heroLabel": "Accès Privé",
+        "heroTitle": "Cercle Bougenville",
+        "heroSubtitle": "Un cercle exclusif pour ceux qui apprécient la tranquillité de la nature et le luxe authentique.",
+        "invitationTitle": "Une Invitation au Privilège",
+        "invitationDesc": "Le Cercle Bougenville n'est pas qu'une adhésion, c'est la clé d'expériences personnalisées à Taman Wisata Bougenville. Nous vous invitons à faire partie de notre histoire.",
+        "privilege1Title": "Accès Prioritaire",
+        "privilege1Desc": "Soyez le premier informé des disponibilités de villas aux dates favorites et des invitations à des événements privés.",
+        "privilege2Title": "Offres Spéciales",
+        "privilege2Desc": "Profitez de tarifs privilégiés pour vos séjours et de compliments spéciaux à l'arrivée.",
+        "privilege3Title": "Service Personnalisé",
+        "privilege3Desc": "Notre équipe de conciergerie reconnaîtra vos préférences pour s'assurer que chaque visite ressemble à rentrer chez soi.",
+        "joinNow": "Demander l'Accès",
+        "ctaTitle": "Rejoindre le Cercle Bougenville",
+        "ctaDesc": "Faites partie de notre famille et commencez votre voyage de luxe dans la nature.",
+        "contactUs": "Nous Contacter",
+        "collectionLabel": "La Collection Privée",
+        "formTitle": "La Candidature",
+        "formHeading": "Demandez Votre Accès",
+        "formSubtitle": "Rejoignez une communauté d'amateurs de nature. Places limitées disponibles pour cette saison.",
+        "submit": "Soumettre la Demande",
+        "city": "Ville / Résidence",
+        "villaPreference": "Villa Préférée",
+        "occasion": "Occasion Typique",
+        "placeholders": {
+            "name": "Entrez votre nom",
+            "email": "email@example.com",
+            "phone": "+33",
+            "city": "ex. Paris, Lyon, Singapour"
+        },
+        "occasionOptions": {
+            "family": "Vacances en Famille",
+            "honeymoon": "Lune de Miel / Couple",
+            "corporate": "Événement d'Entreprise",
+            "wellness": "Retraite Bien-être",
+            "other": "Autre"
+        }
+    },
+    "seo": {
+        "homeTitle": "Taman Wisata Bougenville | Escapade Montagnarde Exclusive",
+        "homeDescription": "Vivez la tranquillité de la nature à Taman Wisata Bougenville. Villas luxueuses, cuisine Nusantara authentique et aventures en plein air au Mont Puntang.",
+        "villasTitle": "Villas de Luxe - Taman Wisata Bougenville",
+        "villasDescription": "Choisissez parmi notre collection de villas exclusives avec piscines privées, vues sur la montagne et installations premium.",
+        "restoTitle": "Restaurant & Fonction - Taman Wisata Bougenville",
+        "restoDescription": "Savourez les saveurs authentiques de Nusantara et organisez vos événements spéciaux dans notre lieu premium.",
+        "facilityTitle": "Installations & Expériences - Taman Wisata Bougenville",
+        "facilityDescription": "Explorez diverses activités extérieures et intérieures pour une expérience de vacances parfaite.",
+        "villasPage": {
+            "all": {
+                "title": "Villas à Bandung | Taman Wisata Bougenville - Location Villa Famille & Groupe",
+                "description": "Louez des villas à Bandung pour familles et groupes. Sélection complète de villas familiales, villas de luxe et villas pour couples au Mont Puntang.",
+                "keywords": "villa à bandung, villa familiale bandung, villa groupe bandung, louer villa bandung"
+            },
+            "luxury": {
+                "title": "Villas de Luxe Bandung | Taman Wisata Bougenville - Collection Premium",
+                "description": "Villas de luxe à Bandung avec installations premium. Louez des villas familiales de luxe pour des rassemblements exclusifs au Mont Puntang.",
+                "keywords": "villa luxe bandung, villa familiale luxe, louer villa luxe, villa premium bandung"
+            },
+            "log_home": {
+                "title": "Villas Familiales Bandung | Taman Wisata Bougenville - Chalet & Cabin Nature",
+                "description": "Villas familiales de style chalet à Bandung. Cabin nature avec atmosphère bois authentique au Mont Puntang.",
+                "keywords": "villa familiale bandung, hébergement bandung, louer villa bandung, villa bois bandung"
+            },
+            "couple": {
+                "title": "Villas Couple Bandung | Taman Wisata Bougenville - Chalet Romantique",
+                "description": "Villas pour couples à Bandung pour une lune de miel romantique. Villas cabin privées pour couples au Mont Puntang.",
+                "keywords": "villa couple bandung, villa romantique, villa lune de miel bandung"
+            }
+        }
+    },
+    "villa": {
+        "categories": {
+            "all": "Toutes les Villas",
+            "luxury": "Collection de Luxe",
+            "log_home": "Chalet",
+            "couple": "Couples Uniquement"
+        },
+        "freeBreakfast": "Petit-déjeuner Gratuit",
+        "amenities": "Équipements",
+        "description": "Description",
+        "availability": "Disponibilité",
+        "pax": "Pers.",
+        "capacity": "Capacité",
+        "bedrooms": "Chambres",
+        "bathrooms": "Salles de Bain",
+        "checkAvailability": "Vérifier la Disponibilité",
+        "bookThisVilla": "Réserver Cette Villa",
+        "weekdayPrice": "Prix en Semaine",
+        "weekendPrice": "Prix le Week-end",
+        "notFound": "Villa Introuvable",
+        "notFoundDesc": "La villa que vous recherchez n'existe pas.",
+        "pricingDetails": "Détails des Tarifs",
+        "weekday": "Semaine",
+        "weekdayDays": "Lun - Jeu",
+        "weekend": "Week-end",
+        "weekendDays": "Ven - Sam",
+        "highSeason": "Haute Saison",
+        "highSeasonDays": "Jours Fériés",
+        "taxNote": "Le prix exclut la taxe de 10% et les frais de service. Les prix sont susceptibles de changer.",
+        "taxNoteShort": "Prix hors taxe de 10%",
+        "sleepingArrangements": "Configurations de Couchage",
+        "room": "Chambre",
+        "facilities": "Équipements de la Villa",
+        "roomFacilities": "Équipements de la Chambre",
+        "naturalFeatures": "Caractéristiques Naturelles",
+        "dining": "Restaurant",
+        "houseRules": "Règles de la Maison",
+        "checkIn": "Arrivée",
+        "checkOut": "Départ",
+        "smoking": "Tabac",
+        "noSmoking": "Non-fumeur dans les chambres",
+        "importantNotes": "Notes Importantes",
+        "showAllPhotos": "Voir toutes les photos",
+        "area": "Surface de la Villa"
+    },
+    "booking": {
+        "title": "Votre Réservation",
+        "checkIn": "Arrivée",
+        "checkOut": "Départ",
+        "guests": "Hôtes",
+        "selectVilla": "Sélectionner une Villa",
+        "submit": "Soumettre la Demande",
+        "whatsappBooking": "Réserver via WhatsApp",
+        "noCharge": "Vous ne serez pas facturé pour l'instant",
+        "serviceFee": "Frais de service",
+        "cleaningFee": "Frais de ménage",
+        "included": "Inclus",
+        "total": "Total",
+        "nights": "nuits",
+        "night": "nuit",
+        "estimatedTotal": "Total Estimé",
+        "weekdayNights": "Semaine",
+        "weekendNights": "Week-end",
+        "highSeasonNights": "Haute Saison",
+        "priceNote": "Prix estimé, hors taxe de 10%",
+        "selectDates": "Sélectionnez des dates pour voir l'estimation du prix",
+        "whatsappMessageVilla": "Bonjour, je souhaiterais réserver {{villaName}}.%0A%0AArrivée : {{checkIn}}%0ADépart : {{checkOut}}%0AHôtes : {{guests}}%0A%0AEstimation {{nights}} nuit(s) : {{price}}%0A%0APouvez-vous confirmer la disponibilité ?"
+    },
+    "villas": {
+        "exploreCluster": "Explorer le Cluster",
+        "cluster": "Cluster",
+        "singleUnit": "Unité Individuelle"
+    },
+    "common": {
+        "learnMore": "En Savoir Plus",
+        "close": "Fermer",
+        "previous": "Précédent",
+        "next": "Suivant",
+        "loading": "Chargement...",
+        "error": "Une erreur s'est produite",
+        "tryAgain": "Réessayer",
+        "success": "Succès !",
+        "required": "Requis",
+        "save": "Enregistrer",
+        "saved": "Enregistré",
+        "share": "Partager",
+        "copied": "Lien copié !",
+        "perNight": "/ nuit",
+        "reviews": "avis",
+        "backTo": "Retour à",
+        "noVillas": "Aucune villa disponible"
+    },
+    "sustainability": {
+        "seo": {
+            "title": "Durabilité | Taman Wisata Bougenville",
+            "description": "Notre engagement envers la conservation de la nature, l'autonomisation de la communauté et les pratiques écologiques au Mont Puntang.",
+            "keywords": "éco resort bandung, tourisme durable indonésie, conservation nature puntang"
+        },
+        "hero": {
+            "label": "Notre Engagement",
+            "title": "Harmonie avec la Nature",
+            "description": "Nous n'existons pas seulement dans la nature ; nous en faisons partie. Notre mission est de préserver la beauté du Mont Puntang pour les générations à venir."
+        },
+        "message": {
+            "quote": "Ne laissez que des empreintes, ne prenez que des photos.",
+            "body": "À Taman Wisata Bougenville, luxe et durabilité vont de pair. Nous croyons que l'hospitalité authentique signifie prendre soin de nos hôtes et de notre maison — la Terre. De la protection de la rivière Cigeureuh à l'autonomisation de notre communauté locale sundanaise, chaque décision que nous prenons est ancrée dans le respect de l'environnement."
+        },
+        "pillars": {
+            "label": "Piliers Fondamentaux",
+            "title": "Notre Approche de la Durabilité",
+            "conservation": {
+                "title": "Conservation des Forêts",
+                "desc": "Nous protégeons activement plus de 5 hectares de forêt de pins et de végétation indigène, garantissant un habitat sûr pour la biodiversité locale comme l'Aigle de Java."
+            },
+            "water": {
+                "title": "Gestion de l'Eau",
+                "desc": "La rivière Cigeureuh est notre bouée de sauvetage. Nous mettons en place des zones strictes 'sans produits chimiques' près des voies navigables et traitons toutes les eaux usées biologiquement."
+            },
+            "waste": {
+                "title": "Gestion Responsable des Déchets",
+                "desc": "Nous visons zéro déchet en décharge. Les déchets organiques sont compostés pour nos jardins et les recyclables sont traités par des partenaires locaux."
+            },
+            "community": {
+                "title": "Autonomisation de la Communauté",
+                "desc": "Plus de 80% de notre personnel vient des villages locaux. Nous donnons la priorité aux agriculteurs et artisans locaux pour nos besoins en cuisine et décoration."
+            }
+        },
+        "plastic": {
+            "label": "Initiative Verte",
+            "title": "Vers un Resort Sans Plastique",
+            "description": "Nous supprimons progressivement les plastiques à usage unique dans tout notre resort pour réduire notre empreinte environnementale.",
+            "item1": "Bouteilles en verre & stations d'eau filtrée",
+            "item2": "Équipements en bambou & amidon de maïs"
+        }
+    },
+    "sticky": {
+        "checkAvailability": "Vérifier la Disponibilité",
+        "bookNow": "Réserver",
+        "whatsappMessage": "Bonjour ! Je souhaiterais faire une réservation à Taman Wisata Bougenville."
+    },
+    "bookingPage": {
+        "seo": {
+            "title": "Réservation | Taman Wisata Bougenville",
+            "description": "Réservez votre villa exclusive à Taman Wisata Bougenville. Réservez directement via WhatsApp ou votre plateforme OTA préférée."
+        },
+        "heroTitle": "Réserver Votre Villa",
+        "heroSubtitle": "Réservez votre villa de rêve à Taman Wisata Bougenville en toute simplicité",
+        "trust": {
+            "rating": "Note de 4,9/5 des hôtes",
+            "secure": "Réservation Sécurisée",
+            "response": "Réponse < 1 Heure",
+            "guests": "5000+ Hôtes Satisfaits"
+        },
+        "methodsLabel": "Options de Réservation",
+        "methodsTitle": "Choisissez Votre Méthode de Réservation",
+        "methodsDesc": "Nous offrons plusieurs options de réservation pour votre commodité. Réservez directement via WhatsApp pour un service personnalisé ou utilisez votre plateforme OTA préférée.",
+        "recommended": "Recommandé",
+        "whatsappTitle": "Réserver Directement via WhatsApp",
+        "whatsappDesc": "Bénéficiez d'un service personnalisé de notre équipe de réservation. Discutez de vos besoins et obtenez les meilleures offres.",
+        "whatsappMessage": "Bonjour, je suis intéressé(e) par la réservation d'une villa à Taman Wisata Bougenville. J'ai trouvé l'information sur votre site web.",
+        "chatNow": "Chatter Maintenant",
+        "responseTime": "Temps de réponse moyen : < 1 heure (08h00 - 21h00 WIB)",
+        "specialists": {
+            "subtitle": "Équipe de Réservation",
+            "title": "Contacter Nos Spécialistes",
+            "desc": "Notre équipe de réservation est prête à vous aider à trouver la villa parfaite pour vos besoins.",
+            "role": "Spécialiste en Réservation",
+            "chatWith": "Chatter avec {{name}}",
+            "messages": {
+                "jaka": "Bonjour Jaka, je suis intéressé(e) par une réservation à Taman Wisata Bougenville. J'ai trouvé l'info sur votre site.",
+                "iis": "Bonjour Iis, je souhaiterais me renseigner sur la disponibilité des villas. J'ai vu votre site.",
+                "teten": "Bonjour Teten, je veux vérifier la disponibilité d'une villa pour des dates spécifiques. Info du site."
+            }
+        },
+        "otaLabel": "Plateformes Partenaires",
+        "otaTitle": "Réserver via les Plateformes OTA",
+        "otaDesc": "Trouvez-nous sur vos plateformes de voyage en ligne préférées pour la comparaison de prix et le paiement facile.",
+        "viewOn": "Voir sur",
+        "otaNote": "Les prix peuvent varier selon les plateformes. Contactez-nous directement pour les meilleures offres.",
+        "whyDirectLabel": "Avantages",
+        "whyDirectTitle": "Pourquoi Réserver Directement ?",
+        "benefit1": {
+            "title": "Garantie Meilleur Prix",
+            "desc": "Obtenez des tarifs spéciaux et des offres exclusives non disponibles sur d'autres plateformes."
+        },
+        "benefit2": {
+            "title": "Flexibilité Maximale",
+            "desc": "Politiques d'annulation plus flexibles et changements d'horaires faciles."
+        },
+        "benefit3": {
+            "title": "Service Personnalisé",
+            "desc": "Consultez directement notre équipe pour personnaliser votre expérience de séjour."
+        },
+        "villasLabel": "Choisir une Villa",
+        "villasTitle": "Notre Collection de Villas",
+        "payment": {
+            "label": "Méthodes de Paiement",
+            "title": "Paiement Facile & Sécurisé",
+            "desc": "Nous acceptons diverses méthodes de paiement pour votre commodité.",
+            "transfer": "Virement Bancaire",
+            "ewallet": "Portefeuille Électronique",
+            "card": "Carte de Crédit",
+            "qris": "QRIS",
+            "note": "Le paiement est confirmé après approbation de votre réservation par notre équipe."
+        },
+        "ctaTitle": "Prêt(e) à Réserver ?",
+        "ctaDesc": "Notre équipe de réservation est prête à vous aider à planifier vos vacances de rêve à Taman Wisata Bougenville.",
+        "ctaButton": "Nous Contacter Maintenant"
+    },
+    "terms": {
+        "title": "Conditions d'Utilisation",
+        "subtitle": "Conditions Générales de notre service",
+        "lastUpdated": "Dernière mise à jour",
+        "sections": [
+            {
+                "title": "1. Conditions Générales",
+                "content": "<p>En accédant et en utilisant le site web et les services de Taman Wisata Bougenville, vous acceptez d'être lié par ces Conditions Générales. Si vous n'acceptez pas une partie de ces conditions, veuillez ne pas utiliser nos services.</p>"
+            },
+            {
+                "title": "2. Réservations et Paiement",
+                "content": "<ul><li>Toutes les réservations sont soumises à la disponibilité des chambres/villas.</li><li>Un acompte peut être requis pour sécuriser votre réservation.</li><li>Le paiement intégral doit être effectué conformément aux instructions fournies lors de la confirmation de réservation.</li><li>Les prix sont susceptibles de changer sans préavis, mais ne seront pas affectés les réservations confirmées.</li></ul>"
+            },
+            {
+                "title": "3. Annulation et Remboursements",
+                "content": "<ul><li>Les politiques d'annulation varient selon le plan tarifaire et la promotion réservés. Veuillez consulter votre confirmation de réservation pour les détails spécifiques.</li><li>Les annulations effectuées dans un certain délai avant l'arrivée peuvent entraîner des frais d'annulation.</li><li>Les remboursements (le cas échéant) seront traités selon le mode de paiement original dans un délai raisonnable.</li></ul>"
+            },
+            {
+                "title": "4. Règles pour les Hôtes",
+                "content": "<ul><li>Les hôtes sont tenus de maintenir l'ordre et le calme pour le confort des autres hôtes.</li><li>Les activités illégales, la détention de drogues illégales ou d'armes dangereuses sont strictement interdites sur les lieux du resort.</li><li>Les dommages matériels causés par les hôtes seront soumis aux coûts de remplacement.</li><li>L'heure d'arrivée est 14h00 WIB et l'heure de départ est 12h00 WIB, sauf accord contraire.</li></ul>"
+            },
+            {
+                "title": "5. Responsabilité",
+                "content": "<p>Taman Wisata Bougenville n'est pas responsable de la perte ou des dommages aux objets de valeur des hôtes non conservés dans des coffres-forts (si disponibles) ou dus à la négligence des hôtes. Nous ne sommes pas non plus responsables des blessures causées par la négligence des hôtes ou la violation des règles de sécurité du resort.</p>"
+            },
+            {
+                "title": "6. Droit Applicable",
+                "content": "<p>Ces Conditions Générales sont régies et interprétées conformément aux lois de la République d'Indonésie. Tout litige survenant sera résolu dans la juridiction des tribunaux indonésiens.</p>"
+            }
+        ]
+    },
+    "privacy": {
+        "title": "Politique de Confidentialité",
+        "subtitle": "Notre engagement à protéger vos données",
+        "lastUpdated": "Dernière mise à jour",
+        "intro": {
+            "title": "1. Introduction",
+            "content": "<p>Bienvenue à Taman Wisata Bougenville. Nous accordons de l'importance à votre vie privée et nous nous engageons à protéger vos informations personnelles. Cette Politique de Confidentialité explique comment nous collectons, utilisons et protégeons vos informations lorsque vous visitez notre site web ou utilisez nos services.</p>"
+        },
+        "collection": {
+            "title": "2. Informations que Nous Collectons",
+            "content": "<p>Nous pouvons collecter les informations suivantes :</p><ul><li><strong>Informations Personnelles :</strong> Nom, adresse e-mail, numéro de téléphone et autres informations d'identité que vous fournissez lors d'une réservation ou en nous contactant.</li><li><strong>Informations de Réservation :</strong> Dates de séjour, préférences de chambre et demandes spéciales.</li><li><strong>Informations Techniques :</strong> Adresse IP, type de navigateur et données d'utilisation du site web (cookies) pour améliorer l'expérience utilisateur.</li></ul>"
+        },
+        "use": {
+            "title": "3. Utilisation des Informations",
+            "content": "<p>Nous utilisons vos informations pour :</p><ul><li>Traiter vos réservations et paiements.</li><li>Vous contacter concernant les confirmations de réservation ou les changements de service.</li><li>Envoyer des informations promotionnelles ou des newsletters (si vous vous êtes inscrit).</li><li>Améliorer la qualité de nos services et de notre site web.</li></ul>"
+        },
+        "protection": {
+            "title": "4. Protection des Données",
+            "content": "<p>Nous mettons en place des mesures de sécurité techniques et organisationnelles appropriées pour protéger vos données personnelles contre l'accès non autorisé, l'utilisation abusive, la perte ou les dommages.</p>"
+        },
+        "sharing": {
+            "title": "5. Partage d'Informations",
+            "content": "<p>Nous ne vendons ni ne louons vos informations personnelles à des tiers. Nous partageons des informations uniquement si la loi l'exige ou avec des prestataires de services tiers qui assistent nos opérations (ex. : traitement des paiements), sous des obligations strictes de confidentialité.</p>"
+        },
+        "contact": {
+            "title": "6. Nous Contacter",
+            "content": "<p>Si vous avez des questions sur cette Politique de Confidentialité, veuillez nous contacter à :<br />E-mail : booking@tamanwisatabougenville.com<br />Téléphone : +62 811 910 2003</p>"
+        }
+    }
+}

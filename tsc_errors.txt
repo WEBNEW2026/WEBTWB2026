@@ -1,0 +1,29 @@
+﻿App.tsx(264,19): error TS2322: Type '{ key: string; langCode: string; label: { code: string; name: string; }; isActive: boolean; onSelect: () => void; }' is not assignable to type '{ langCode: string; label: { code: string; name: string; }; isActive: boolean; onSelect: () => void; }'.
+  Property 'key' does not exist on type '{ langCode: string; label: { code: string; name: string; }; isActive: boolean; onSelect: () => void; }'.
+cms/src/App.tsx(2,56): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+cms/src/components/auth/ProtectedRoute.tsx(2,39): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+cms/src/components/layout/Sidebar.tsx(2,38): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+cms/src/pages/LoginPage.tsx(2,29): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+cms/src/pages/SettingsPage.tsx(43,31): error TS2339: Property 'exportToMainWebsite' does not exist on type '{ uploadImage: (file: File) => Promise<string>; getVillas: () => Promise<Villa[]>; createVilla: (villa: Omit<Villa, "id" | "createdAt" | "updatedAt">) => Promise<...>; ... 28 more ...; getDashboardStats: () => Promise<...>; }'.
+cms/src/pages/SettingsPage.tsx(56,31): error TS2339: Property 'importFromFile' does not exist on type '{ uploadImage: (file: File) => Promise<string>; getVillas: () => Promise<Villa[]>; createVilla: (villa: Omit<Villa, "id" | "createdAt" | "updatedAt">) => Promise<...>; ... 28 more ...; getDashboardStats: () => Promise<...>; }'.
+components/features/BookingCard.tsx(304,17): error TS2322: Type '{ children: string; variant: "primary"; size: "lg"; className: string; onClick: () => void; id: string; }' is not assignable to type 'ButtonProps'.
+  Property 'onClick' does not exist on type 'ButtonProps'.
+components/layout/Header.tsx(7,34): error TS2307: Cannot find module '../features/LanguageSwitcher' or its corresponding type declarations.
+components/layout/Header.tsx(57,55): error TS2322: Type '{ children: string; variant: "ghost"; size: "sm"; onClick: () => void; }' is not assignable to type 'ButtonProps'.
+  Property 'onClick' does not exist on type 'ButtonProps'.
+components/layout/Header.tsx(58,55): error TS2322: Type '{ children: string; variant: "ghost"; size: "sm"; onClick: () => void; }' is not assignable to type 'ButtonProps'.
+  Property 'onClick' does not exist on type 'ButtonProps'.
+components/layout/Header.tsx(59,55): error TS2322: Type '{ children: string; variant: "ghost"; size: "sm"; onClick: () => void; }' is not assignable to type 'ButtonProps'.
+  Property 'onClick' does not exist on type 'ButtonProps'.
+components/layout/Header.tsx(60,55): error TS2322: Type '{ children: string; variant: "ghost"; size: "sm"; onClick: () => void; }' is not assignable to type 'ButtonProps'.
+  Property 'onClick' does not exist on type 'ButtonProps'.
+components/layout/Header.tsx(62,57): error TS2322: Type '{ children: string; variant: "primary"; size: "sm"; onClick: () => void; }' is not assignable to type 'ButtonProps'.
+  Property 'onClick' does not exist on type 'ButtonProps'.
+components/layout/MobileMenu.tsx(69,29): error TS2322: Type '{ children: string; variant: "primary"; size: "lg"; className: string; onClick: () => void; }' is not assignable to type 'ButtonProps'.
+  Property 'onClick' does not exist on type 'ButtonProps'.
+components/ui/animations/types.ts(4,15): error TS2503: Cannot find namespace 'React'.
+components/ui/HeroBookingWidget.tsx(116,66): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+components/ui/Input.tsx(9,43): error TS2339: Property 'className' does not exist on type 'InputProps'.
+components/ui/Input.tsx(15,19): error TS2339: Property 'onChange' does not exist on type '{}'.
+components/ui/Input.tsx(16,19): error TS2339: Property 'onChange' does not exist on type '{}'.
+components/ui/Input.tsx(46,44): error TS2339: Property 'value' does not exist on type '{}'.

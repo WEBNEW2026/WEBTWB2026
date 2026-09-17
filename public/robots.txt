@@ -1,0 +1,23 @@
+# Robots.txt for Taman Wisata Bougenville
+# Allow all search engines to crawl
+
+User-agent: *
+Allow: /
+
+# Disallow admin and CMS paths
+Disallow: /cms/
+Disallow: /admin/
+Disallow: /_*
+
+# Sitemap location
+Sitemap: https://tamanwisatabougenville.com/sitemap.xml
+
+# Crawl-delay for polite bots
+Crawl-delay: 1
+
+# Special rules for specific bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /

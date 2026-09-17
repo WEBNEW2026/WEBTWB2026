@@ -1,0 +1,65 @@
+# ============================================================
+# .htaccess — Taman Wisata Bougenville
+# File ini otomatis di-copy ke dist/ saat npm run build
+# ============================================================
+
+# ── SECURITY HEADERS ────────────────────────────────────────
+<IfModule mod_headers.c>
+    # Hapus CSP lama dari server jika ada
+    Header unset Content-Security-Policy
+
+    # Set CSP yang benar — mengizinkan GTM, GA4, Meta Pixel, dll
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://googleleads.g.doubleclick.net https://td.doubleclick.net https://pagead2.googlesyndication.com https://connect.facebook.net https://analytics.tiktok.com https://js-agent.newrelic.com https://claritycdn.microsoft.com https://www.clarity.ms https://aistudiocdn.com https://static.hotjar.com https://script.hotjar.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://googleleads.g.doubleclick.net https://stats.g.doubleclick.net https://td.doubleclick.net https://pagead2.googlesyndication.com https://www.google.com https://api.frankfurter.app https://analytics.tiktok.com https://www.clarity.ms https://e.clarity.ms https://connect.facebook.net https://js-agent.newrelic.com https://bam.nr-data.net; frame-src 'self' https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://googleleads.g.doubleclick.net https://www.google.com; base-uri 'self'; form-action 'self' https://wa.me;"
+
+    # Header keamanan lainnya
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# ── SPA ROUTING (React Router) ──────────────────────────────
+# Semua path diarahkan ke index.html agar React bisa handle routing
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Jangan redirect file yang sudah ada
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Redirect semua ke index.html
+    RewriteRule . /index.html [L]
+</IfModule>
+
+# ── CACHE CONTROL ───────────────────────────────────────────
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # HTML — jangan cache (selalu fresh)
+    <FilesMatch "\.html$">
+        ExpiresDefault "access plus 0 seconds"
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+    </FilesMatch>
+
+    # Assets dengan content hash — cache panjang
+    <FilesMatch "\.(js|css|woff2|woff|ttf|eot)$">
+        ExpiresDefault "access plus 1 year"
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # Gambar
+    <FilesMatch "\.(jpg|jpeg|png|gif|ico|svg|webp|avif)$">
+        ExpiresDefault "access plus 1 year"
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+</IfModule>
+
+# ── GZIP COMPRESSION ────────────────────────────────────────
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+    AddOutputFilterByType DEFLATE application/javascript application/json
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
