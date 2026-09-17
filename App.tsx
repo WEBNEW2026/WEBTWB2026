@@ -17,6 +17,7 @@ import { Logo } from './components/ui/Logo';
 import { Loading } from './components/ui/Loading';
 import { HomePage } from './pages/HomePage';
 import { Footer } from './components/ui/Footer';
+import { PromoPopup } from './components/ui/PromoPopup';
 
 // Lazy load other pages
 const VillasPage = React.lazy(() => import('./components/VillasPage'));
@@ -331,6 +332,9 @@ function App() {
           <MessageCircle size={24} />
         </a>
       )}
+
+      {/* === PROMO POPUP === */}
+      <PromoPopup />
 
     </div>
     </CurrencyProvider>
