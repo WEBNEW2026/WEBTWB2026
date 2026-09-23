@@ -124,6 +124,11 @@ export function VillaDetailPage({ villaId }: VillaDetailPageProps) {
 
     const currentVilla = VILLAS.find(v => v.id === villaId);
 
+    // Diskon 20% untuk semua villa kecuali Forest House
+    const DISCOUNT_PCT = 20;
+    const hasDiscount = currentVilla?.id !== 'forest-house';
+    const discountMultiplier = hasDiscount ? (1 - DISCOUNT_PCT / 100) : 1;
+
     // Load wishlist from localStorage on mount AND scroll to top
     useEffect(() => {
         // Scroll to top when page loads
@@ -425,38 +430,78 @@ export function VillaDetailPage({ villaId }: VillaDetailPageProps) {
                         <FadeIn delay={0.5} className="pb-8 border-b border-gray-100">
                             <h2 className="font-serif text-2xl font-light mb-6 flex items-center gap-3">
                                 <Calendar className="text-forest-dark" size={24} />
-                                {t('villa.pricingDetails', 'Pricing Details')}
+                                {t('villa.pricingDetails', 'Detail Harga')}
                             </h2>
-                            <div className="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                    <div>
-                                        <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">{t('villa.weekday', 'Weekday')}</p>
-                                        <p className="text-xs text-gray-400 mb-1">{t('villa.weekdayDays', 'Mon - Thu')}</p>
-                                        <div className="flex items-baseline gap-1.5">
-                                            <p className="font-serif text-xl text-forest-dark">{formatPrice(currentVilla.priceWeekday)}</p>
+                            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+                                {/* Badge diskon */}
+                                {hasDiscount && (
+                                    <div className="flex items-center gap-3 px-6 pt-5 pb-3">
+                                        <span style={{
+                                            display: 'inline-flex',
+                                            alignItems: 'center',
+                                            gap: '6px',
+                                            backgroundColor: '#1a5c38',
+                                            color: '#fff',
+                                            fontWeight: 700,
+                                            fontSize: '12px',
+                                            letterSpacing: '0.04em',
+                                            padding: '4px 10px',
+                                            borderRadius: '6px',
+                                        }}>
+                                            🏷 {DISCOUNT_PCT}% OFF
+                                        </span>
+                                        <span style={{ color: '#555', fontSize: '14px', fontStyle: 'italic' }}>| Special Rate</span>
+                                    </div>
+                                )}
+
+                                <div className="px-6 pb-6 space-y-5">
+                                    {/* WEEKDAY */}
+                                    <div className="pt-4 border-b border-gray-100 pb-5">
+                                        <p className="text-xs uppercase tracking-widest text-gray-500 font-bold mb-1">{t('villa.weekday', 'WEEKDAY')}</p>
+                                        <p className="text-xs text-gray-400 mb-2">{t('villa.weekdayDays', 'Sen - Kam')}</p>
+                                        <div className="flex items-center gap-3 flex-wrap">
+                                            {hasDiscount && (
+                                                <span className="text-gray-400 text-sm line-through">{formatPrice(currentVilla.priceWeekday)}</span>
+                                            )}
+                                            <span className="font-bold text-gray-900" style={{ fontSize: '22px' }}>{formatPrice(Math.round(currentVilla.priceWeekday * discountMultiplier))}</span>
                                             <span className="text-[10px] font-bold tracking-widest text-white bg-forest-dark/70 px-1.5 py-0.5 rounded-sm">{currency.code}</span>
+                                            <span className="text-gray-400 text-sm">/ malam</span>
                                         </div>
                                     </div>
-                                    <div>
-                                        <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">{t('villa.weekend', 'Weekend')}</p>
-                                        <p className="text-xs text-gray-400 mb-1">{t('villa.weekendDays', 'Fri - Sat')}</p>
-                                        <div className="flex items-baseline gap-1.5">
-                                            <p className="font-serif text-xl text-forest-dark">{formatPrice(currentVilla.priceWeekend)}</p>
+
+                                    {/* WEEKEND */}
+                                    <div className="border-b border-gray-100 pb-5">
+                                        <p className="text-xs uppercase tracking-widest text-gray-500 font-bold mb-1">{t('villa.weekend', 'WEEKEND')}</p>
+                                        <p className="text-xs text-gray-400 mb-2">{t('villa.weekendDays', 'Jum - Sab')}</p>
+                                        <div className="flex items-center gap-3 flex-wrap">
+                                            {hasDiscount && (
+                                                <span className="text-gray-400 text-sm line-through">{formatPrice(currentVilla.priceWeekend)}</span>
+                                            )}
+                                            <span className="font-bold text-gray-900" style={{ fontSize: '22px' }}>{formatPrice(Math.round(currentVilla.priceWeekend * discountMultiplier))}</span>
                                             <span className="text-[10px] font-bold tracking-widest text-white bg-forest-dark/70 px-1.5 py-0.5 rounded-sm">{currency.code}</span>
+                                            <span className="text-gray-400 text-sm">/ malam</span>
                                         </div>
                                     </div>
+
+                                    {/* HIGH SEASON */}
                                     <div>
-                                        <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">{t('villa.highSeason', 'High Season')}</p>
-                                        <p className="text-xs text-gray-400 mb-1">{t('villa.highSeasonDays', 'Holidays')}</p>
-                                        <div className="flex items-baseline gap-1.5">
-                                            <p className="font-serif text-xl text-forest-dark">{formatPrice(currentVilla.priceHighSeason)}</p>
+                                        <p className="text-xs uppercase tracking-widest text-gray-500 font-bold mb-1">{t('villa.highSeason', 'HIGH SEASON')}</p>
+                                        <p className="text-xs text-gray-400 mb-2">{t('villa.highSeasonDays', 'Hari Libur')}</p>
+                                        <div className="flex items-center gap-3 flex-wrap">
+                                            {hasDiscount && (
+                                                <span className="text-gray-400 text-sm line-through">{formatPrice(currentVilla.priceHighSeason)}</span>
+                                            )}
+                                            <span className="font-bold text-gray-900" style={{ fontSize: '22px' }}>{formatPrice(Math.round(currentVilla.priceHighSeason * discountMultiplier))}</span>
                                             <span className="text-[10px] font-bold tracking-widest text-white bg-forest-dark/70 px-1.5 py-0.5 rounded-sm">{currency.code}</span>
+                                            <span className="text-gray-400 text-sm">/ malam</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="mt-4 pt-4 border-t border-gray-200 text-xs text-gray-500 flex items-start gap-2">
-                                    <Info size={14} className="mt-0.5 flex-shrink-0" />
-                                    <p>{t('villa.taxNote', 'Price excludes 10% tax and service charge. Prices subject to change.')}</p>
+
+                                {/* Tax note */}
+                                <div className="mx-6 mb-5 bg-gray-50 rounded-xl p-3 flex items-start gap-2">
+                                    <Info size={14} className="mt-0.5 flex-shrink-0 text-gray-400" />
+                                    <p className="text-xs text-gray-500">{t('villa.taxNote', 'Harga belum termasuk 10% pajak dan biaya layanan. Harga dapat berubah.')}</p>
                                 </div>
                             </div>
                         </FadeIn>
@@ -589,10 +634,12 @@ export function VillaDetailPage({ villaId }: VillaDetailPageProps) {
                     <div className="md:col-span-5 lg:col-span-4 relative order-first md:order-last">
                         <div className="sticky top-28 md:top-32 z-20 w-full">
                             <BookingCard
-                                price={currentVilla.priceWeekday || currentVilla.price}
-                                priceWeekday={currentVilla.priceWeekday}
-                                priceWeekend={currentVilla.priceWeekend}
-                                priceHighSeason={currentVilla.priceHighSeason}
+                                price={Math.round((currentVilla.priceWeekday || currentVilla.price) * discountMultiplier)}
+                                priceWeekday={Math.round(currentVilla.priceWeekday * discountMultiplier)}
+                                priceWeekend={Math.round(currentVilla.priceWeekend * discountMultiplier)}
+                                priceHighSeason={Math.round(currentVilla.priceHighSeason * discountMultiplier)}
+                                originalPriceWeekday={hasDiscount ? currentVilla.priceWeekday : undefined}
+                                discountPercent={hasDiscount ? DISCOUNT_PCT : undefined}
                                 rating={4.9}
                                 reviews={45}
                                 villaId={currentVilla.id}

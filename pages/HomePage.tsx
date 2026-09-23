@@ -233,14 +233,30 @@ export function HomePage() {
                                             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-6 border-t border-gray-100">
                                                 <div>
                                                     <span className="text-xs text-gray-400 uppercase tracking-wider block mb-1">{t('home.fromPrice')}</span>
-                                                    <div className="flex items-baseline gap-2">
-                                                        <span className="text-forest-dark font-serif text-lg">
-                                                            {formatPrice(villa.priceWeekday || 0)}
-                                                        </span>
-                                                        <span className="text-[10px] font-bold tracking-widest text-white bg-forest-dark/70 px-1.5 py-0.5 rounded-sm">
-                                                            {currency.code}
-                                                        </span>
-                                                    </div>
+                                                    {villa.id !== 'forest-house' ? (
+                                                        <div>
+                                                            <div className="flex items-baseline gap-2">
+                                                                <span className="text-forest-dark font-serif text-lg">
+                                                                    {formatPrice(Math.round((villa.priceWeekday || 0) * 0.8))}
+                                                                </span>
+                                                                <span className="text-[10px] font-bold tracking-widest text-white bg-forest-dark/70 px-1.5 py-0.5 rounded-sm">
+                                                                    {currency.code}
+                                                                </span>
+                                                            </div>
+                                                            <span className="text-xs text-gray-400 line-through">
+                                                                {formatPrice(villa.priceWeekday || 0)}
+                                                            </span>
+                                                        </div>
+                                                    ) : (
+                                                        <div className="flex items-baseline gap-2">
+                                                            <span className="text-forest-dark font-serif text-lg">
+                                                                {formatPrice(villa.priceWeekday || 0)}
+                                                            </span>
+                                                            <span className="text-[10px] font-bold tracking-widest text-white bg-forest-dark/70 px-1.5 py-0.5 rounded-sm">
+                                                                {currency.code}
+                                                            </span>
+                                                        </div>
+                                                    )}
                                                 </div>
                                                 <button
                                                     onClick={() => handleViewVilla(villa.id)}

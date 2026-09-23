@@ -10,6 +10,8 @@ interface BookingCardProps {
     priceWeekday?: number;
     priceWeekend?: number;
     priceHighSeason?: number;
+    originalPriceWeekday?: number; // Harga asli sebelum diskon
+    discountPercent?: number;       // e.g. 20
     rating?: number;
     reviews?: number;
     villaId: string;
@@ -148,6 +150,8 @@ export function BookingCard({
     priceWeekday,
     priceWeekend,
     priceHighSeason,
+    originalPriceWeekday,
+    discountPercent,
     rating = 4.9,
     reviews = 120,
     villaId,
@@ -233,11 +237,39 @@ export function BookingCard({
 
     return (
         <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-[0_6px_16px_rgba(0,0,0,0.12)]">
+            {/* Discount Badge */}
+            {discountPercent && (
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
+                    <span style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '5px',
+                        backgroundColor: '#1a5c38',
+                        color: '#fff',
+                        fontWeight: 700,
+                        fontSize: '11px',
+                        letterSpacing: '0.04em',
+                        padding: '4px 9px',
+                        borderRadius: '6px',
+                    }}>
+                        🏷 {discountPercent}% OFF
+                    </span>
+                    <span style={{ color: '#666', fontSize: '13px', fontStyle: 'italic' }}>| Special Rate</span>
+                </div>
+            )}
+
             {/* Price Header */}
-            <div className="flex items-baseline gap-2 mb-4">
-                <span className="text-2xl font-bold text-gray-900">{format(effectiveWeekday)}</span>
-                <span className="text-[10px] font-bold tracking-widest text-white bg-forest-dark/70 px-1.5 py-0.5 rounded-sm">{currency.code}</span>
-                <span className="text-gray-500 text-sm">{t('common.perNight', '/ night')}</span>
+            <div className="mb-4">
+                <div className="flex items-baseline gap-2">
+                    <span className="text-2xl font-bold text-gray-900">{format(effectiveWeekday)}</span>
+                    <span className="text-[10px] font-bold tracking-widest text-white bg-forest-dark/70 px-1.5 py-0.5 rounded-sm">{currency.code}</span>
+                    <span className="text-gray-500 text-sm">{t('common.perNight', '/ night')}</span>
+                </div>
+                {originalPriceWeekday && (
+                    <span className="text-gray-400 text-sm line-through">
+                        {format(originalPriceWeekday)}
+                    </span>
+                )}
             </div>
 
             {/* Rating */}
