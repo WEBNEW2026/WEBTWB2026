@@ -387,8 +387,8 @@ function MobileLanguageButton({
 function MobileCurrencyGrid({ onSelect }: { onSelect: () => void }) {
   const { currency, setCurrencyCode } = useCurrency();
   const currencies = [
-    { code: 'IDR', symbol: 'Rp' },
     { code: 'USD', symbol: '$'  },
+    { code: 'IDR', symbol: 'Rp' },
     { code: 'EUR', symbol: '€'  },
     { code: 'SGD', symbol: 'S$' },
     { code: 'Yuan', symbol: '¥'  },

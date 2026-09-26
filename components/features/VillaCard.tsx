@@ -99,11 +99,16 @@ export function VillaCard({ villa, onBook }: VillaCardProps) {
                     </div>
                 )}
 
-                <div className="flex items-baseline gap-1">
+                <div className="flex items-baseline gap-2">
                     <span className="text-sm text-gray-600">From</span>
                     <span className="text-base font-semibold text-gray-900">
-                        {format(villa.price)}
+                        {format(villa.id !== 'forest-house' ? Math.round(villa.price * 0.8) : villa.price)}
                     </span>
+                    {villa.id !== 'forest-house' && (
+                        <span className="text-xs text-gray-400 line-through">
+                            {format(villa.price)}
+                        </span>
+                    )}
                     <span className="text-sm text-gray-600">/ night</span>
                 </div>
 

@@ -11,7 +11,7 @@ export function CurrencySwitcher({
     isScrolled = false,
     isHomePage = false,
 }: CurrencySwitcherProps) {
-    const { currency, setCurrencyCode } = useCurrency();
+    const { currency, currencies, setCurrencyCode } = useCurrency();
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -60,7 +60,7 @@ export function CurrencySwitcher({
                     <p className="px-3 pt-2 pb-1 text-[9px] uppercase tracking-widest text-gray-400 font-bold">
                         Currency
                     </p>
-                    {CURRENCIES.map((c) => (
+                    {(currencies || CURRENCIES).map((c) => (
                         <button
                             key={c.code}
                             id={`btn-currency-${c.code.toLowerCase()}`}

@@ -8,6 +8,7 @@ import { BookingState, Villa, Package } from '../types';
 import { VILLAS, PACKAGES } from '../constants';
 import { trackEvent, trackBookingStart, trackBookingStep, trackDateSelected, trackBookingSubmit, trackDateRange } from '../utils/analytics';
 import { useFormAbandonment } from '../hooks/useFormAbandonment';
+import { useCurrency } from '../hooks/useCurrency';
 
 interface BookingFormProps {
   initialVilla?: string;
@@ -15,6 +16,7 @@ interface BookingFormProps {
 }
 
 const BookingForm: React.FC<BookingFormProps> = ({ initialVilla, initialPackage }) => {
+  const { format: formatPrice } = useCurrency();
   const [state, setState] = useState<BookingState>({
     step: 1,
     type: initialPackage ? 'package' : 'villa',
@@ -87,6 +89,10 @@ const BookingForm: React.FC<BookingFormProps> = ({ initialVilla, initialPackage 
   const calculateEstimate = () => {
     if (!selectedItem) return 0;
     let price = selectedItem.price;
+    // Diskon 20% untuk semua villa kecuali forest house
+    if (state.type === 'villa' && 'id' in selectedItem && selectedItem.id !== 'forest-house') {
+      price = Math.round(price * 0.8);
+    }
     if (state.checkIn && state.checkOut) {
       const start = new Date(state.checkIn);
       const end = new Date(state.checkOut);
@@ -167,7 +173,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ initialVilla, initialPackage 
             <div className="flex justify-between items-end mb-2">
               <span className="text-xs text-white/50 uppercase tracking-widest">Est. Total</span>
               <span className="text-2xl font-serif font-bold text-gold">
-                Rp {calculateEstimate().toLocaleString('id-ID')}
+                {formatPrice(calculateEstimate())}
               </span>
             </div>
             <p className="text-[10px] text-white/40 italic text-right">*Excludes taxes & service</p>

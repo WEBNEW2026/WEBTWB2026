@@ -7,6 +7,7 @@ import { SEOHead } from '../components/ui/SEOHead';
 import { StructuredData } from '../components/ui/StructuredData';
 import { trackPageView, trackWhatsAppBooking, trackOTAClick, trackAirbnbVillaClick, trackSpecialistClick } from '../utils/analytics';
 import { VILLAS } from '../constants';
+import { useCurrency } from '../hooks/useCurrency';
 
 // OTA Logo Components
 const BookingComLogo = () => (
@@ -53,6 +54,7 @@ const airbnbProperties = {
 
 export function BookingPage() {
     const { t, i18n } = useTranslation();
+    const { format: formatPrice } = useCurrency();
     const [isAirbnbModalOpen, setIsAirbnbModalOpen] = useState(false);
 
     useEffect(() => {
@@ -364,9 +366,20 @@ export function BookingPage() {
                                         <div className="p-3 flex items-center justify-between">
                                             <div>
                                                 <p className="text-xs text-gray-400">{t('home.fromPrice')}</p>
-                                                <p className="text-sm font-bold text-forest-dark">
-                                                    Rp {(villa.price / 1000000).toFixed(1)}jt
-                                                </p>
+                                                {villa.id !== 'forest-house' ? (
+                                                    <div>
+                                                        <p className="text-sm font-bold text-forest-dark">
+                                                            {formatPrice(Math.round(villa.price * 0.8))}
+                                                        </p>
+                                                        <p className="text-xs text-gray-400 line-through">
+                                                            {formatPrice(villa.price)}
+                                                        </p>
+                                                    </div>
+                                                ) : (
+                                                    <p className="text-sm font-bold text-forest-dark">
+                                                        {formatPrice(villa.price)}
+                                                    </p>
+                                                )}
                                             </div>
                                             <ArrowRight size={16} className="text-gray-400 group-hover:text-forest transition-colors" />
                                         </div>

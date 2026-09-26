@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { trackWhatsAppBooking, trackDateSelected, trackDateRange, trackEvent } from '../../utils/analytics';
+import { useCurrency } from '../../hooks/useCurrency';
 
 interface StickyBookingBarProps {
     lang?: 'id' | 'en';
@@ -13,6 +14,7 @@ export const StickyBookingBar: React.FC<StickyBookingBarProps> = ({
     villaName,
     basePrice
 }) => {
+    const { format: formatPrice } = useCurrency();
     // Mobile expand state
     const [isExpanded, setIsExpanded] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
@@ -195,7 +197,7 @@ export const StickyBookingBar: React.FC<StickyBookingBarProps> = ({
                                     <span className="w-1.5 h-1.5 bg-gold rounded-full animate-pulse"></span>
                                     {lang === 'id' ? 'Mulai Reservasi' : 'Start Your Journey'}
                                 </span>
-                                <span className="text-sm font-serif text-gray-900">From Rp 2.000.000/night</span>
+                                <span className="text-sm font-serif text-gray-900">From {formatPrice(basePrice ? Math.round(basePrice * 0.8) : 1600000)}/night</span>
                             </div>
                             <button
                                 onClick={(e) => { 

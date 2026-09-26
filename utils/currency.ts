@@ -79,14 +79,13 @@ export async function fetchExchangeRates(): Promise<ExchangeRates | null> {
             }
         } catch { }
 
-        // Static fallback rates (approximate as of Jan 2026)
-        // 1 IDR ≈ 0.0000625 USD, 0.0000589 EUR, 0.000455 CNY
+        // Static fallback rates (Berdasarkan kurs acuan Wise: 1 USD = 17.790 IDR -> Rp 10.000.000 = $562)
         console.warn('[Currency] Using static fallback rates');
         return {
             rates: {
-                USD: 0.0000625,  // ~16,000 IDR = 1 USD
-                EUR: 0.0000589,  // ~17,000 IDR = 1 EUR  
-                CNY: 0.000455,   // ~2,200 IDR = 1 CNY
+                USD: 1 / 17790,  // ~17,790 IDR = 1 USD (10jt -> $562)
+                EUR: 1 / 20340,  // ~20,340 IDR = 1 EUR  
+                CNY: 1 / 2654,   // ~2,654 IDR = 1 CNY
             },
             base: 'IDR',
             date: new Date().toISOString().split('T')[0],
