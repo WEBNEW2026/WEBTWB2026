@@ -50,6 +50,9 @@ const CSP_POLICY = [
     "https://pagead2.googlesyndication.com " +
     "https://www.google.com " +
     "https://api.frankfurter.app " +
+    "https://api.frankfurter.dev " +
+    "https://open.er-api.com " +
+    "https://api.exchangerate-api.com " +
     "https://analytics.tiktok.com " +
     "https://www.clarity.ms " +
     "https://e.clarity.ms " +

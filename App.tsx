@@ -385,25 +385,16 @@ function MobileLanguageButton({
 }
 
 function MobileCurrencyGrid({ onSelect }: { onSelect: () => void }) {
-  const { currency, setCurrencyCode } = useCurrency();
-  const currencies = [
-    { code: 'USD', symbol: '$'  },
-    { code: 'IDR', symbol: 'Rp' },
-    { code: 'EUR', symbol: '€'  },
-    { code: 'SGD', symbol: 'S$' },
-    { code: 'Yuan', symbol: '¥'  },
-    { code: 'Yen', symbol: '¥'  },
-    { code: 'WON', symbol: '₩'  },
-  ];
+  const { currency, currencies, setCurrencyCode } = useCurrency();
   return (
-    <div className="grid grid-cols-3 gap-2">
+    <div className="grid grid-cols-4 gap-2">
       {currencies.map((c) => {
         const isActive = currency.code === c.code;
         return (
           <button
             key={c.code}
             onClick={() => { setCurrencyCode(c.code); onSelect(); }}
-            className={`flex flex-col items-center py-2 px-3 rounded-md text-xs font-bold border transition-all ${
+            className={`flex flex-col items-center py-2 px-2 rounded-md text-xs font-bold border transition-all ${
               isActive
                 ? 'bg-gold/20 border-gold text-gold'
                 : 'bg-white/5 border-white/10 text-white/70 hover:bg-white/10 hover:border-white/20'
