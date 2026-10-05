@@ -5,6 +5,7 @@ import { Villa } from '../types';
 import { VILLAS } from '../constants';
 import { SEOHead } from './ui/SEOHead';
 import { trackPageView, trackEvent } from '../utils/analytics';
+import { useCurrency } from '../hooks/useCurrency';
 
 interface VillasPageProps {
   lang: 'id' | 'en' | 'zh';
@@ -53,6 +54,8 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
 
   // Use static data from constants instead of API
   const villasData = VILLAS;
+
+
 
 
   // Define Clusters Configuration
@@ -407,9 +410,11 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
                   <h3 className="font-serif text-2xl md:text-3xl text-gray-900 mb-3 group-hover:text-forest transition-colors">
                     {cluster.name}
                   </h3>
-                  <p className="text-gray-600 font-light text-base leading-loose mb-6 flex-grow">
+                  <p className="text-gray-600 font-light text-base leading-loose mb-4 flex-grow">
                     {getContent(cluster.description)}
                   </p>
+
+
 
                   <div className="flex items-center justify-center gap-2 text-forest text-xs uppercase tracking-[0.2em] font-medium group-hover:gap-4 transition-all duration-300">
                     <span>{cluster.type === 'direct' ? t('home.viewDetails') : t('villas.exploreCluster', 'Explore Cluster')}</span>
@@ -591,6 +596,7 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
 // Helper Component for Villa Card (Reused)
 const VillaCard: React.FC<{ villa: any }> = ({ villa }) => {
   const { t, i18n } = useTranslation();
+  const { format: formatPrice, currency } = useCurrency();
   const lang = (i18n.language?.split('-')[0] || 'id') as 'id' | 'en' | 'zh' | 'de' | 'fr' | 'ja' | 'ko';
 
   // Get localized villa name if available, else fallback to plain name
@@ -607,6 +613,11 @@ const VillaCard: React.FC<{ villa: any }> = ({ villa }) => {
     if (capacity.toLowerCase().includes('pax')) return capacity;
     return capacity.replace(/orang/i, t('villa.pax', 'Pax'));
   };
+
+  const hasDiscount = villa.id !== 'forest-house';
+  const effectivePrice = hasDiscount
+    ? Math.round((villa.priceWeekday || villa.price || 0) * 0.8)
+    : (villa.priceWeekday || villa.price || 0);
 
   return (
     <div
@@ -626,7 +637,7 @@ const VillaCard: React.FC<{ villa: any }> = ({ villa }) => {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
 
-        {/* Capacity Badge (Replaces Price) */}
+        {/* Capacity Badge */}
         <div className="absolute bottom-4 left-4 bg-white/10 backdrop-blur-md px-4 py-2 rounded-sm flex items-center gap-2">
           <Users size={16} className="text-white" />
           <p className="font-serif text-lg md:text-xl text-white font-medium">{getCapacityDisplay(villa.capacity)}</p>
@@ -663,6 +674,36 @@ const VillaCard: React.FC<{ villa: any }> = ({ villa }) => {
             <span>{villa.area ? `${villa.area} m²` : t('villa.freeBreakfast', 'Free Breakfast')}</span>
           </div>
         </div>
+
+        {/* Pricing with Live Currency Conversion */}
+        {effectivePrice > 0 && (
+          <div className="pt-3 border-t border-gray-100 mb-4 flex items-center justify-between">
+            <div>
+              <span className="text-[11px] text-gray-400 uppercase tracking-wider block">
+                {t('home.fromPrice', 'Mulai dari')}
+              </span>
+              <div className="flex items-baseline gap-1.5">
+                <span className="font-serif text-xl font-bold text-forest-dark">
+                  {formatPrice(effectivePrice)}
+                </span>
+                <span className="text-[10px] font-bold tracking-widest text-white bg-forest-dark/70 px-1.5 py-0.5 rounded-sm">
+                  {currency.code}
+                </span>
+                <span className="text-xs text-gray-500">/{t('villa.perNight', 'malam')}</span>
+              </div>
+              {hasDiscount && (
+                <span className="text-xs text-gray-400 line-through">
+                  {formatPrice(villa.priceWeekday || villa.price)}
+                </span>
+              )}
+            </div>
+            {hasDiscount && (
+              <span className="bg-gold/15 text-gold-dark text-[11px] font-bold px-2 py-1 rounded">
+                20% OFF
+              </span>
+            )}
+          </div>
+        )}
 
         {/* Action */}
         <button className="w-full py-3 border-2 border-gray-200 text-gray-600 text-xs md:text-sm uppercase tracking-[0.2em] hover:bg-forest-green hover:text-white hover:border-forest-green transition-all duration-300 rounded-lg flex items-center justify-center gap-2 group-hover:bg-forest-green group-hover:text-white group-hover:border-forest-green active:scale-95">
