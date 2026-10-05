@@ -596,7 +596,6 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
 // Helper Component for Villa Card (Reused)
 const VillaCard: React.FC<{ villa: any }> = ({ villa }) => {
   const { t, i18n } = useTranslation();
-  const { format: formatPrice, currency } = useCurrency();
   const lang = (i18n.language?.split('-')[0] || 'id') as 'id' | 'en' | 'zh' | 'de' | 'fr' | 'ja' | 'ko';
 
   // Get localized villa name if available, else fallback to plain name
@@ -614,10 +613,6 @@ const VillaCard: React.FC<{ villa: any }> = ({ villa }) => {
     return capacity.replace(/orang/i, t('villa.pax', 'Pax'));
   };
 
-  const hasDiscount = villa.id !== 'forest-house';
-  const effectivePrice = hasDiscount
-    ? Math.round((villa.priceWeekday || villa.price || 0) * 0.8)
-    : (villa.priceWeekday || villa.price || 0);
 
   return (
     <div
@@ -675,35 +670,7 @@ const VillaCard: React.FC<{ villa: any }> = ({ villa }) => {
           </div>
         </div>
 
-        {/* Pricing with Live Currency Conversion */}
-        {effectivePrice > 0 && (
-          <div className="pt-3 border-t border-gray-100 mb-4 flex items-center justify-between">
-            <div>
-              <span className="text-[11px] text-gray-400 uppercase tracking-wider block">
-                {t('home.fromPrice', 'Mulai dari')}
-              </span>
-              <div className="flex items-baseline gap-1.5">
-                <span className="font-serif text-xl font-bold text-forest-dark">
-                  {formatPrice(effectivePrice)}
-                </span>
-                <span className="text-[10px] font-bold tracking-widest text-white bg-forest-dark/70 px-1.5 py-0.5 rounded-sm">
-                  {currency.code}
-                </span>
-                <span className="text-xs text-gray-500">/{t('villa.perNight', 'malam')}</span>
-              </div>
-              {hasDiscount && (
-                <span className="text-xs text-gray-400 line-through">
-                  {formatPrice(villa.priceWeekday || villa.price)}
-                </span>
-              )}
-            </div>
-            {hasDiscount && (
-              <span className="bg-gold/15 text-gold-dark text-[11px] font-bold px-2 py-1 rounded">
-                20% OFF
-              </span>
-            )}
-          </div>
-        )}
+
 
         {/* Action */}
         <button className="w-full py-3 border-2 border-gray-200 text-gray-600 text-xs md:text-sm uppercase tracking-[0.2em] hover:bg-forest-green hover:text-white hover:border-forest-green transition-all duration-300 rounded-lg flex items-center justify-center gap-2 group-hover:bg-forest-green group-hover:text-white group-hover:border-forest-green active:scale-95">

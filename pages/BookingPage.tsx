@@ -345,8 +345,8 @@ export function BookingPage() {
 
                     {/* Horizontal scroll on mobile */}
                     <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
-                        <div className="flex md:grid md:grid-cols-3 gap-4 min-w-max md:min-w-0 max-w-4xl mx-auto">
-                            {VILLAS.slice(0, 3).map((villa, index) => (
+                        <div className="flex md:grid md:grid-cols-4 gap-4 min-w-max md:min-w-0 max-w-6xl mx-auto">
+                            {VILLAS.slice(0, 8).map((villa, index) => (
                                 <FadeIn key={villa.id} delay={index * 0.1}>
                                     <button
                                         onClick={() => navigateToVilla(villa.id)}

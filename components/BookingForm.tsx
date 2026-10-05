@@ -234,7 +234,11 @@ const BookingForm: React.FC<BookingFormProps> = ({ initialVilla, initialPackage 
                   >
                     <option value="">-- View Options --</option>
                     {state.type === 'villa'
-                      ? VILLAS.map(v => <option key={v.id} value={v.id}>{v.name} (Max {v.capacity})</option>)
+                      ? VILLAS.map(v => (
+                          <option key={v.id} value={v.id}>
+                            {v.name} ({v.capacity}) — {formatPrice(v.id !== 'forest-house' ? Math.round((v.priceWeekday || v.price) * 0.8) : (v.priceWeekday || v.price))} / malam
+                          </option>
+                        ))
                       : PACKAGES.map(p => <option key={p.id} value={p.id}>{p.title} ({p.duration})</option>)
                     }
                   </select>

@@ -34,10 +34,6 @@ export function HomePage() {
         window.dispatchEvent(new CustomEvent('navigate-villa', { detail: villaId }));
     };
 
-    const handleNavigateToVillas = () => {
-        window.dispatchEvent(new CustomEvent('navigate', { detail: 'villas' }));
-    };
-
     const handleBookNow = () => {
         trackBookingStart('HomePage Book Now Button');
         window.open(`https://wa.me/628119102003?text=${encodeURIComponent(t('home.whatsapp.inquiry'))}`, '_blank');
@@ -272,14 +268,15 @@ export function HomePage() {
                         })}
                     </Stagger>
 
-                    <div className="text-center mt-16">
+                    <div className="flex items-center justify-center mt-16">
                         <button
-                            onClick={handleNavigateToVillas}
-                            className="inline-block border border-forest-dark text-forest-dark px-10 py-3 text-xs font-bold uppercase tracking-[0.2em] hover:bg-forest-dark hover:text-white transition-all duration-300"
+                            onClick={() => window.dispatchEvent(new CustomEvent('navigate', { detail: 'villas' }))}
+                            className="inline-block border border-forest-dark text-forest-dark px-8 py-3 text-xs font-bold uppercase tracking-[0.2em] hover:bg-forest-dark hover:text-white transition-all duration-300"
                         >
                             {t('home.viewAllVillas')}
                         </button>
                     </div>
+
                 </div>
             </section >
 
