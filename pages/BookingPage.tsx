@@ -17,39 +17,39 @@ const BookingComLogo = () => (
 );
 
 const airbnbProperties = {
-  "Luxury's Collection": [
-    { name: "Forest House Villa", url: "https://airbnb.com/h/kozyforesthousevilla" },
-    { name: "Mooi Lake House", url: "https://airbnb.com/h/kozymooilakehouse" },
-    { name: "Gordes Villa", url: "https://airbnb.com/h/kozygordesvilla" },
-    { name: "Roussillon Villa", url: "https://airbnb.com/h/kozyroussillonvilla" },
-    { name: "Lourmarin Villa", url: "https://airbnb.com/h/kozylourmarinvilla" },
-    { name: "Olinda Villa", url: "https://airbnb.com/h/kozyolindavilla" },
-    { name: "Selby Villa", url: "https://airbnb.com/h/kozyselbyvilla" }
-  ],
-  "Log Cabin": [
-    { name: "Pinus Villa", url: "https://airbnb.com/h/kozypinusvilla" },
-    { name: "Suren Villa", url: "https://airbnb.com/h/kozysurenvilla" },
-    { name: "Puspa Villa", url: "https://airbnb.com/h/kozypuspavilla" },
-    { name: "Campaka Villa", url: "https://airbnb.com/h/kozycampakavilla" }
-  ],
-  "Couples Only": [
-    { name: "Hana Villa", url: "https://airbnb.com/h/kozyhanavilla" },
-    { name: "Fiore Villa", url: "https://airbnb.com/h/kozyfiorevilla" },
-    { name: "Blomst Villa", url: "https://airbnb.com/h/kozyblomstvilla" },
-    { name: "Abutilon Cottages 1", url: "https://airbnb.com/h/kozyabutilonvilla" },
-    { name: "Agaphantus Cottages 2", url: "https://airbnb.com/h/kozyagaphantusvilla" },
-    { name: "Allamanda Cottages 3", url: "https://airbnb.com/h/kozyallamandavilla" },
-    { name: "Azalea Cottages 4", url: "https://airbnb.com/h/kozyazaleavilla" },
-    { name: "Buddleja Cottages 5", url: "https://airbnb.com/h/kozybuddlejavilla" },
-    { name: "Calathea Cottages 6", url: "https://airbnb.com/h/kozycalatheavilla" },
-    { name: "Russellia Villa", url: "https://airbnb.com/h/kozyrusseliavilla" },
-    { name: "Camelia Cottages 8", url: "https://airbnb.com/h/kozycameliavilla" },
-    { name: "Jacaranda Cottages 9", url: "https://airbnb.com/h/kozyjacarandavilla" },
-    { name: "Kigelia Cottages 10", url: "https://airbnb.com/h/kozykigeliavilla" },
-    { name: "Lophantera Cottages 11", url: "https://airbnb.com/h/kozylophanteravilla" },
-    { name: "Monstera Cottages 12", url: "https://airbnb.com/h/kozymonsteravilla" },
-    { name: "Philodendron Cottages 13", url: "https://airbnb.com/h/kozyphilodendronvilla" }
-  ]
+    "Luxury's Collection": [
+        { name: "Forest House Villa", url: "https://airbnb.com/h/kozyforesthousevilla" },
+        { name: "Mooi Lake House", url: "https://airbnb.com/h/kozymooilakehouse" },
+        { name: "Gordes Villa", url: "https://airbnb.com/h/kozygordesvilla" },
+        { name: "Roussillon Villa", url: "https://airbnb.com/h/kozyroussillonvilla" },
+        { name: "Lourmarin Villa", url: "https://airbnb.com/h/kozylourmarinvilla" },
+        { name: "Olinda Villa", url: "https://airbnb.com/h/kozyolindavilla" },
+        { name: "Selby Villa", url: "https://airbnb.com/h/kozyselbyvilla" }
+    ],
+    "Log Cabin": [
+        { name: "Pinus Villa", url: "https://airbnb.com/h/kozypinusvilla" },
+        { name: "Suren Villa", url: "https://airbnb.com/h/kozysurenvilla" },
+        { name: "Puspa Villa", url: "https://airbnb.com/h/kozypuspavilla" },
+        { name: "Campaka Villa", url: "https://airbnb.com/h/kozycampakavilla" }
+    ],
+    "Couples Only": [
+        { name: "Hana Villa", url: "https://airbnb.com/h/kozyhanavilla" },
+        { name: "Fiore Villa", url: "https://airbnb.com/h/kozyfiorevilla" },
+        { name: "Blomst Villa", url: "https://airbnb.com/h/kozyblomstvilla" },
+        { name: "Abutilon Cottages 1", url: "https://airbnb.com/h/kozyabutilonvilla" },
+        { name: "Agaphantus Cottages 2", url: "https://airbnb.com/h/kozyagaphantusvilla" },
+        { name: "Allamanda Cottages 3", url: "https://airbnb.com/h/kozyallamandavilla" },
+        { name: "Azalea Cottages 4", url: "https://airbnb.com/h/kozyazaleavilla" },
+        { name: "Buddleja Cottages 5", url: "https://airbnb.com/h/kozybuddlejavilla" },
+        { name: "Calathea Cottages 6", url: "https://airbnb.com/h/kozycalatheavilla" },
+        { name: "Russellia Villa", url: "https://airbnb.com/h/kozyrusseliavilla" },
+        { name: "Camelia Cottages 8", url: "https://airbnb.com/h/kozycameliavilla" },
+        { name: "Jacaranda Cottages 9", url: "https://airbnb.com/h/kozyjacarandavilla" },
+        { name: "Kigelia Cottages 10", url: "https://airbnb.com/h/kozykigeliavilla" },
+        { name: "Lophantera Cottages 11", url: "https://airbnb.com/h/kozylophanteravilla" },
+        { name: "Monstera Cottages 12", url: "https://airbnb.com/h/kozymonsteravilla" },
+        { name: "Philodendron Cottages 13", url: "https://airbnb.com/h/kozyphilodendronvilla" }
+    ]
 };
 
 export function BookingPage() {
@@ -404,7 +404,7 @@ export function BookingPage() {
             {/* Airbnb Modal */}
             {isAirbnbModalOpen && (
                 <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-                    <div 
+                    <div
                         className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity"
                         onClick={() => setIsAirbnbModalOpen(false)}
                     />
@@ -414,7 +414,7 @@ export function BookingPage() {
                                 <h3 className="font-serif text-xl text-gray-900">Book on Airbnb</h3>
                                 <p className="text-sm text-gray-500 mt-1">Select your preferred villa unit below</p>
                             </div>
-                            <button 
+                            <button
                                 onClick={() => setIsAirbnbModalOpen(false)}
                                 className="p-2 text-gray-400 hover:text-gray-900 hover:bg-white rounded-full transition-all"
                             >
@@ -431,7 +431,7 @@ export function BookingPage() {
                                         </h4>
                                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                             {villas.map(villa => (
-                                                <a 
+                                                <a
                                                     key={villa.name}
                                                     href={villa.url}
                                                     target="_blank"

@@ -1,9 +1,11 @@
 import React, { useState, useMemo } from 'react';
 import { Star, Calculator } from 'lucide-react';
 import { trackWhatsAppBooking } from '../../utils/analytics';
+import { recordInquiryLead } from '../../utils/leadCollector';
 import { Button } from '../ui/Button';
 import { useCurrency } from '../../hooks/useCurrency';
 import { useTranslation } from 'react-i18next';
+import i18n from '../../i18n';
 
 interface BookingCardProps {
     price: number;
@@ -183,52 +185,54 @@ export function BookingCard({
     const handleBook = () => {
         trackWhatsAppBooking(villaName || 'Unknown Villa');
 
-        let message: string;
+        const isID = !i18n.language || i18n.language.startsWith('id');
+        const displayCheckIn = checkIn ? formatDateDisplay(checkIn) : 'TBD';
+        const displayCheckOut = checkOut ? formatDateDisplay(checkOut) : 'TBD';
+        const hasDates = breakdown && breakdown.totalNights > 0;
+        const totalNightsText = hasDates ? `${breakdown.totalNights} malam` : '- malam';
+        const totalPriceText = hasDates ? format(breakdown.grandTotal) : '-';
 
-        if (breakdown && breakdown.totalNights > 0) {
-            // Use translated template with price estimation
-            const template = t('booking.whatsappMessageVilla',
-                'Hello, I would like to book {{villaName}}.%0A%0ACheck-in: {{checkIn}}%0ACheck-out: {{checkOut}}%0AGuests: {{guests}}%0A%0AEstimated {{nights}} night(s): {{price}}%0A%0APlease confirm availability.',
-                {
-                    villaName: villaName,
-                    checkIn: formatDateDisplay(checkIn),
-                    checkOut: formatDateDisplay(checkOut),
-                    guests: guests,
-                    nights: breakdown.totalNights,
-                    price: format(breakdown.grandTotal),
-                }
-            );
-            // i18next may return the already-interpolated string, but if not, do manual replacement
-            message = template
-                .replace('{{villaName}}', villaName)
-                .replace('{{checkIn}}', formatDateDisplay(checkIn))
-                .replace('{{checkOut}}', formatDateDisplay(checkOut))
-                .replace('{{guests}}', String(guests))
-                .replace('{{nights}}', String(breakdown.totalNights))
-                .replace('{{price}}', format(breakdown.grandTotal));
+        let fullMessage: string;
+
+        if (isID) {
+            fullMessage = [
+                `Halo, saya ingin bertanya / reservasi ${villaName} melalui Website resmi:`,
+                '',
+                `• Check-in: ${displayCheckIn}`,
+                `• Check-out: ${displayCheckOut}`,
+                `• Tamu: ${guests} orang`,
+                `• Estimasi: ${totalNightsText} (${totalPriceText})`,
+                '',
+                'Mohon info ketersediaannya ya. Terima kasih!',
+                '(Pemesanan melalui Website Taman Wisata Bougenville)'
+            ].join('\n');
         } else {
-            // No dates selected — use general template
-            const template = t('booking.whatsappMessageVilla',
-                'Hello, I would like to book {{villaName}}.%0A%0ACheck-in: {{checkIn}}%0ACheck-out: {{checkOut}}%0AGuests: {{guests}}%0A%0AEstimated {{nights}} night(s): {{price}}%0A%0APlease confirm availability.',
-                {
-                    villaName: villaName,
-                    checkIn: checkIn || 'TBD',
-                    checkOut: checkOut || 'TBD',
-                    guests: guests,
-                    nights: '-',
-                    price: '-',
-                }
-            );
-            message = template
-                .replace('{{villaName}}', villaName)
-                .replace('{{checkIn}}', checkIn || 'TBD')
-                .replace('{{checkOut}}', checkOut || 'TBD')
-                .replace('{{guests}}', String(guests))
-                .replace('{{nights}}', '-')
-                .replace('{{price}}', '-');
+            fullMessage = [
+                `Hello, I would like to inquire / book ${villaName} via the official Website:`,
+                '',
+                `• Check-in: ${displayCheckIn}`,
+                `• Check-out: ${displayCheckOut}`,
+                `• Guests: ${guests} person(s)`,
+                `• Estimation: ${hasDates ? `${breakdown.totalNights} night(s)` : '- night(s)'} (${totalPriceText})`,
+                '',
+                'Please confirm availability. Thank you!',
+                '(Inquiry via Taman Wisata Bougenville Website)'
+            ].join('\n');
         }
 
-        const whatsappUrl = `https://wa.me/628119102003?text=${message}`;
+        // Catat otomatis ke Google Sheet & simpan ke penyimpanan lokal
+        recordInquiryLead({
+            villaName: villaName || 'Villa Bougenville',
+            checkIn: displayCheckIn,
+            checkOut: displayCheckOut,
+            guests: guests,
+            nights: hasDates ? breakdown.totalNights : '-',
+            estimatedPrice: totalPriceText,
+            source: `Website - Detail Villa (${villaName})`,
+            message: fullMessage,
+        });
+
+        const whatsappUrl = `https://wa.me/628119102003?text=${encodeURIComponent(fullMessage)}`;
         window.open(whatsappUrl, '_blank');
     };
 
