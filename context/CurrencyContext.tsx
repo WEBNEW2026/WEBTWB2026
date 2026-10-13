@@ -23,9 +23,21 @@ export const FALLBACK_CURRENCIES: CurrencyInfo[] = [
 
 export const CURRENCIES: CurrencyInfo[] = FALLBACK_CURRENCIES;
 
-// Cache & interval konversi kurs: Otomasi per 5 jam
+// Cache & interval konversi kurs: Update 1x per hari
 const CACHE_KEY = 'twb_currency_rates_cache';
-const AUTO_REFRESH_INTERVAL_MS = 5 * 60 * 60 * 1000; // 5 Jam (18.000.000 ms)
+const AUTO_REFRESH_INTERVAL_MS = 24 * 60 * 60 * 1000; // 24 Jam (86.400.000 ms)
+
+// Helper: fetch dengan timeout
+async function fetchWithTimeout(url: string, timeoutMs = 8000): Promise<Response> {
+    const controller = new AbortController();
+    const id = setTimeout(() => controller.abort(), timeoutMs);
+    try {
+        const res = await fetch(url, { signal: controller.signal, cache: 'no-store' });
+        return res;
+    } finally {
+        clearTimeout(id);
+    }
+}
 
 interface CachedCurrencyData {
     rates: Record<string, number>;
@@ -100,12 +112,12 @@ export function CurrencyProvider({ children }: { children: React.ReactNode }) {
                         const ageMs = now - cached.timestamp;
                         const ageMin = Math.round(ageMs / 60000);
                         if (ageMs < AUTO_REFRESH_INTERVAL_MS) {
-                            const remainingMin = Math.round((AUTO_REFRESH_INTERVAL_MS - ageMs) / 60000);
-                            console.log(`[Currency] ✅ Cache valid (usia: ${ageMin} menit, update berikutnya dalam ${remainingMin} menit), USD rate: ${cached.rates.USD?.toFixed(8)}`);
+                            const remainingHrs = Math.round((AUTO_REFRESH_INTERVAL_MS - ageMs) / 3600000);
+                            console.log(`[Currency] ✅ Cache valid (usia: ${ageMin} menit, update berikutnya dalam ~${remainingHrs} jam), USD rate: ${cached.rates.USD?.toFixed(8)}`);
                             applyRates(cached.rates, cached.date, false);
                             return;
                         } else {
-                            console.log(`[Currency] ⏰ Cache expired (usia: ${ageMin} menit >= 300 menit). Memperbarui kurs dari API...`);
+                            console.log(`[Currency] ⏰ Cache expired (usia: ${ageMin} menit >= 1440 menit). Memperbarui kurs dari API...`);
                             localStorage.removeItem(CACHE_KEY);
                         }
                     } else {
@@ -120,10 +132,10 @@ export function CurrencyProvider({ children }: { children: React.ReactNode }) {
             // 2. Fetch dari multi-provider API dengan auto-failover
             let fetchedData: { rates: Record<string, number>; date: string } | null = null;
 
-            // Provider 1: Open ExchangeRate API (Live real-time, selalu update harian/intraday, tanpa API key)
+            // Provider 1: Open ExchangeRate API
             try {
                 console.log('[Currency] Mencoba Provider 1: Open ExchangeRate API...');
-                const res = await fetch('https://open.er-api.com/v6/latest/USD', { cache: 'no-store' });
+                const res = await fetchWithTimeout('https://open.er-api.com/v6/latest/USD');
                 if (res.ok) {
                     const data = await res.json();
                     if (data?.result === 'success' && data.rates?.IDR) {
@@ -152,9 +164,9 @@ export function CurrencyProvider({ children }: { children: React.ReactNode }) {
             if (!fetchedData) {
                 try {
                     console.log('[Currency] Mencoba Provider 2: Frankfurter API...');
-                    let res = await fetch('https://api.frankfurter.app/latest?base=EUR', { cache: 'no-store' });
+                    let res = await fetchWithTimeout('https://api.frankfurter.app/latest?base=EUR');
                     if (!res.ok) {
-                        res = await fetch('https://api.frankfurter.dev/v1/latest?base=EUR', { cache: 'no-store' });
+                        res = await fetchWithTimeout('https://api.frankfurter.dev/v1/latest?base=EUR');
                     }
                     if (res.ok) {
                         const data = await res.json();
@@ -185,7 +197,7 @@ export function CurrencyProvider({ children }: { children: React.ReactNode }) {
             if (!fetchedData) {
                 try {
                     console.log('[Currency] Mencoba Provider 3: ExchangeRate-API v4...');
-                    const res = await fetch('https://api.exchangerate-api.com/v4/latest/USD', { cache: 'no-store' });
+                    const res = await fetchWithTimeout('https://api.exchangerate-api.com/v4/latest/USD');
                     if (res.ok) {
                         const data = await res.json();
                         if (data?.rates?.IDR) {
@@ -211,6 +223,39 @@ export function CurrencyProvider({ children }: { children: React.ReactNode }) {
                 }
             }
 
+            // Provider 4: jsdelivr CDN (currency-api) — selalu update harian
+            if (!fetchedData) {
+                try {
+                    console.log('[Currency] Mencoba Provider 4: jsdelivr currency-api...');
+                    const today = new Date().toISOString().split('T')[0];
+                    const res = await fetchWithTimeout(
+                        `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/idr.json`
+                    );
+                    if (res.ok) {
+                        const data = await res.json();
+                        const idr = data?.idr;
+                        if (idr?.usd) {
+                            fetchedData = {
+                                rates: {
+                                    IDR: 1,
+                                    USD: idr.usd || FALLBACK_CURRENCIES.find(c => c.code === 'USD')!.rate,
+                                    EUR: idr.eur || FALLBACK_CURRENCIES.find(c => c.code === 'EUR')!.rate,
+                                    SGD: idr.sgd || FALLBACK_CURRENCIES.find(c => c.code === 'SGD')!.rate,
+                                    CNY: idr.cny || FALLBACK_CURRENCIES.find(c => c.code === 'CNY')!.rate,
+                                    JPY: idr.jpy || FALLBACK_CURRENCIES.find(c => c.code === 'JPY')!.rate,
+                                    KRW: idr.krw || FALLBACK_CURRENCIES.find(c => c.code === 'KRW')!.rate,
+                                    NOK: idr.nok || FALLBACK_CURRENCIES.find(c => c.code === 'NOK')!.rate,
+                                },
+                                date: today,
+                            };
+                            console.log('[Currency] ✅ Sukses update kurs dari jsdelivr currency-api:', fetchedData.rates);
+                        }
+                    }
+                } catch (err4) {
+                    console.warn('[Currency] Provider 4 gagal:', err4);
+                }
+            }
+
             // 3. Simpan dan terapkan kurs yang berhasil diambil
             if (fetchedData) {
                 try {
@@ -223,7 +268,7 @@ export function CurrencyProvider({ children }: { children: React.ReactNode }) {
                 } catch { }
 
                 applyRates(fetchedData.rates, fetchedData.date, false);
-                console.log(`[Currency] 🕒 Kurs berhasil diperbarui dan disimpan dalam cache (berlaku 5 jam ke depan sampai ${new Date(Date.now() + AUTO_REFRESH_INTERVAL_MS).toLocaleTimeString()})`);
+                console.log(`[Currency] 🕒 Kurs berhasil diperbarui dan disimpan dalam cache (berlaku 24 jam ke depan sampai ${new Date(Date.now() + AUTO_REFRESH_INTERVAL_MS).toLocaleTimeString()})`);
             } else {
                 console.warn('[Currency] Semua provider API offline, menggunakan fallback cache / default');
 
@@ -250,13 +295,13 @@ export function CurrencyProvider({ children }: { children: React.ReactNode }) {
         // Panggil pertama kali saat komponen dimuat
         fetchLiveRates(false);
 
-        // Pasang interval otomatis berjalan setiap 5 jam (18.000.000 ms)
+        // Pasang interval otomatis berjalan setiap 24 jam
         const intervalId = setInterval(() => {
-            console.log('[Currency] Timer 5 jam terpenuhi: Menjalankan pembaruan otomatis...');
+            console.log('[Currency] Timer 24 jam terpenuhi: Menjalankan pembaruan otomatis...');
             fetchLiveRates(true);
         }, AUTO_REFRESH_INTERVAL_MS);
 
-        // Periksa juga jika pengguna kembali membuka tab setelah 5 jam
+        // Periksa juga jika pengguna kembali membuka tab setelah 24 jam
         const handleVisibilityChange = () => {
             if (document.visibilityState === 'visible') {
                 try {
@@ -264,9 +309,9 @@ export function CurrencyProvider({ children }: { children: React.ReactNode }) {
                     if (cachedRaw) {
                         const cached: CachedCurrencyData = JSON.parse(cachedRaw);
                         if (Date.now() - cached.timestamp >= AUTO_REFRESH_INTERVAL_MS) {
-                            console.log('[Currency] Tab aktif kembali & cache > 5 jam: Memperbarui kurs...');
-                            fetchLiveRates(true);
-                        }
+                                console.log('[Currency] Tab aktif kembali & cache > 24 jam: Memperbarui kurs...');
+                                fetchLiveRates(true);
+                            }
                     }
                 } catch { }
             }

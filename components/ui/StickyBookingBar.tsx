@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { trackWhatsAppBooking, trackDateSelected, trackDateRange, trackEvent } from '../../utils/analytics';
+import { recordInquiryLead } from '../../utils/leadCollector';
 import { useCurrency } from '../../hooks/useCurrency';
 
 interface StickyBookingBarProps {
@@ -61,23 +62,59 @@ export const StickyBookingBar: React.FC<StickyBookingBarProps> = ({
     }, [isExpanded]);
 
     const handleCheckAvailability = () => {
-        const baseMessage = lang === 'id'
-            ? `Halo Taman Wisata Bougenville, saya ingin cek ketersediaan`
-            : `Hello Taman Wisata Bougenville, I'd like to check availability`;
+        const displayVilla = villaName || 'Taman Wisata Bougenville';
+        const displayCheckIn = checkIn
+            ? new Date(checkIn).toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' })
+            : 'TBD';
+        const displayCheckOut = checkOut
+            ? new Date(checkOut).toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' })
+            : 'TBD';
+        const nightsText = nights > 0 ? `${nights} malam` : '- malam';
+        const priceEstimate = nights > 0 && basePrice ? new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(basePrice * nights) : '-';
 
-        const dateInfo = checkIn && checkOut
-            ? ` untuk ${checkIn} - ${checkOut} (${nights} malam)`
-            : '';
+        let fullMessage: string;
+        if (lang === 'id') {
+            fullMessage = [
+                `Halo, saya ingin memesan / bertanya tentang ${displayVilla} melalui Website resmi:`,
+                '',
+                `• Check-in: ${displayCheckIn}`,
+                `• Check-out: ${displayCheckOut}`,
+                `• Tamu: ${guests} orang`,
+                `• Estimasi: ${nightsText} (${priceEstimate})`,
+                '',
+                'Mohon info ketersediaannya ya. Terima kasih!',
+                '(Pemesanan melalui Website Taman Wisata Bougenville)'
+            ].join('\n');
+        } else {
+            fullMessage = [
+                `Hello, I would like to book / inquire about ${displayVilla} via the official Website:`,
+                '',
+                `• Check-in: ${displayCheckIn}`,
+                `• Check-out: ${displayCheckOut}`,
+                `• Guests: ${guests} person(s)`,
+                `• Estimation: ${nights > 0 ? `${nights} night(s)` : '- night(s)'} (${priceEstimate})`,
+                '',
+                'Please confirm availability. Thank you!',
+                '(Inquiry via Taman Wisata Bougenville Website)'
+            ].join('\n');
+        }
 
-        const guestInfo = ` untuk ${guests} tamu`;
-        const villaInfo = villaName ? `. Saya tertarik dengan ${villaName}` : '';
+        // Record the lead
+        recordInquiryLead({
+            villaName: displayVilla,
+            checkIn: displayCheckIn,
+            checkOut: displayCheckOut,
+            guests: guests,
+            nights: nights > 0 ? nights : '-',
+            estimatedPrice: priceEstimate,
+            source: `Website - Sticky Bar${isExpanded ? ' Mobile' : ' Desktop'}`,
+            message: fullMessage,
+        });
 
-        const message = encodeURIComponent(baseMessage + dateInfo + guestInfo + villaInfo);
-        
         // Track the WhatsApp click
         trackWhatsAppBooking(`Sticky Bar${isExpanded ? ' - Mobile' : ' - Desktop'}${villaName ? ` - ${villaName}` : ''}`);
-        
-        window.open(`https://wa.me/628119102003?text=${message}`, '_blank');
+
+        window.open(`https://wa.me/628119102003?text=${encodeURIComponent(fullMessage)}`, '_blank');
     };
 
     // Get minimum date (today)
@@ -200,9 +237,9 @@ export const StickyBookingBar: React.FC<StickyBookingBarProps> = ({
                                 <span className="text-sm font-serif text-gray-900">From {formatPrice(basePrice ? Math.round(basePrice * 0.8) : 1600000)}/night</span>
                             </div>
                             <button
-                                onClick={(e) => { 
-                                    e.stopPropagation(); 
-                                    setIsExpanded(true); 
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    setIsExpanded(true);
                                     trackEvent({ action: 'mobile_sticky_bar_expand', category: 'engagement', label: villaName || 'general' });
                                 }}
                                 className="bg-forest-dark text-white px-6 py-3 rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-black transition-colors"

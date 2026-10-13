@@ -15,7 +15,7 @@ const CSP_POLICY = [
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' https://fonts.gstatic.com",
   "img-src 'self' data: https: blob:",
-  "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://googleleads.g.doubleclick.net https://stats.g.doubleclick.net https://td.doubleclick.net https://pagead2.googlesyndication.com https://www.google.com https://api.frankfurter.app https://api.frankfurter.dev https://open.er-api.com https://api.exchangerate-api.com https://analytics.tiktok.com https://www.clarity.ms https://e.clarity.ms https://connect.facebook.net https://js-agent.newrelic.com https://bam.nr-data.net",
+  "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://googleleads.g.doubleclick.net https://stats.g.doubleclick.net https://td.doubleclick.net https://pagead2.googlesyndication.com https://www.google.com https://api.frankfurter.app https://api.frankfurter.dev https://open.er-api.com https://api.exchangerate-api.com https://analytics.tiktok.com https://www.clarity.ms https://e.clarity.ms https://connect.facebook.net https://js-agent.newrelic.com https://bam.nr-data.net https://cdn.jsdelivr.net",
   "frame-src 'self' https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://googleleads.g.doubleclick.net https://www.google.com",
   "base-uri 'self'",
   "form-action 'self' https://wa.me"
@@ -48,17 +48,17 @@ app.use('/uploads', express.static(uploadsDir));
 initDatabase();
 
 // ── API Routes ──────────────────────────────────────────────
-const authRoutes    = require('./routes/auth');
-const uploadRoutes  = require('./routes/upload');
-const villaRoutes   = require('./routes/villas');
+const authRoutes = require('./routes/auth');
+const uploadRoutes = require('./routes/upload');
+const villaRoutes = require('./routes/villas');
 const packageRoutes = require('./routes/packages');
-const blogRoutes    = require('./routes/blog');
+const blogRoutes = require('./routes/blog');
 
-app.use('/api/auth',     authRoutes);
-app.use('/api/upload',   uploadRoutes);
-app.use('/api/villas',   villaRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/upload', uploadRoutes);
+app.use('/api/villas', villaRoutes);
 app.use('/api/packages', packageRoutes);
-app.use('/api/blog',     blogRoutes);
+app.use('/api/blog', blogRoutes);
 
 // ── Serve React App (dist/) ─────────────────────────────────
 // Serve static files dari hasil build Vite

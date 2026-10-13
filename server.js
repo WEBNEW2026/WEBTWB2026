@@ -13,9 +13,9 @@ import { fileURLToPath } from 'url';
 
 // ES module __dirname equivalent
 const __filename = fileURLToPath(import.meta.url);
-const __dirname  = path.dirname(__filename);
+const __dirname = path.dirname(__filename);
 
-const app  = express();
+const app = express();
 const PORT = process.env.PORT || 3000;
 
 // ── Content Security Policy ─────────────────────────────────────
@@ -23,47 +23,48 @@ const PORT = process.env.PORT || 3000;
 const CSP_POLICY = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline' 'unsafe-eval' " +
-    "https://www.googletagmanager.com " +
-    "https://www.google-analytics.com " +
-    "https://www.googleadservices.com " +
-    "https://googleads.g.doubleclick.net " +
-    "https://googleleads.g.doubleclick.net " +
-    "https://td.doubleclick.net " +
-    "https://pagead2.googlesyndication.com " +
-    "https://connect.facebook.net " +
-    "https://analytics.tiktok.com " +
-    "https://www.clarity.ms " +
-    "https://claritycdn.microsoft.com",
+  "https://www.googletagmanager.com " +
+  "https://www.google-analytics.com " +
+  "https://www.googleadservices.com " +
+  "https://googleads.g.doubleclick.net " +
+  "https://googleleads.g.doubleclick.net " +
+  "https://td.doubleclick.net " +
+  "https://pagead2.googlesyndication.com " +
+  "https://connect.facebook.net " +
+  "https://analytics.tiktok.com " +
+  "https://www.clarity.ms " +
+  "https://claritycdn.microsoft.com",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' data: https://fonts.gstatic.com",
   "img-src 'self' data: https: blob:",
   "connect-src 'self' " +
-    "https://www.google-analytics.com " +
-    "https://analytics.google.com " +
-    "https://region1.google-analytics.com " +
-    "https://www.googletagmanager.com " +
-    "https://www.googleadservices.com " +
-    "https://googleads.g.doubleclick.net " +
-    "https://googleleads.g.doubleclick.net " +
-    "https://stats.g.doubleclick.net " +
-    "https://td.doubleclick.net " +
-    "https://pagead2.googlesyndication.com " +
-    "https://www.google.com " +
-    "https://api.frankfurter.app " +
-    "https://api.frankfurter.dev " +
-    "https://open.er-api.com " +
-    "https://api.exchangerate-api.com " +
-    "https://analytics.tiktok.com " +
-    "https://www.clarity.ms " +
-    "https://e.clarity.ms " +
-    "https://connect.facebook.net " +
-    "https://bam.nr-data.net",
+  "https://www.google-analytics.com " +
+  "https://analytics.google.com " +
+  "https://region1.google-analytics.com " +
+  "https://www.googletagmanager.com " +
+  "https://www.googleadservices.com " +
+  "https://googleads.g.doubleclick.net " +
+  "https://googleleads.g.doubleclick.net " +
+  "https://stats.g.doubleclick.net " +
+  "https://td.doubleclick.net " +
+  "https://pagead2.googlesyndication.com " +
+  "https://www.google.com " +
+  "https://api.frankfurter.app " +
+  "https://api.frankfurter.dev " +
+  "https://open.er-api.com " +
+  "https://api.exchangerate-api.com " +
+  "https://analytics.tiktok.com " +
+  "https://www.clarity.ms " +
+  "https://e.clarity.ms " +
+  "https://connect.facebook.net " +
+  "https://bam.nr-data.net " +
+  "https://cdn.jsdelivr.net",
   "frame-src 'self' " +
-    "https://www.googletagmanager.com " +
-    "https://td.doubleclick.net " +
-    "https://googleads.g.doubleclick.net " +
-    "https://googleleads.g.doubleclick.net " +
-    "https://www.google.com",
+  "https://www.googletagmanager.com " +
+  "https://td.doubleclick.net " +
+  "https://googleads.g.doubleclick.net " +
+  "https://googleleads.g.doubleclick.net " +
+  "https://www.google.com",
   "base-uri 'self'",
   "form-action 'self' https://wa.me"
 ].join('; ');
