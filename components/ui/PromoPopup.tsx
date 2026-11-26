@@ -5,12 +5,6 @@ const WHATSAPP_NUMBER = '628119102003';
 // ── Konfigurasi setiap slide popup ──────────────────────────────
 const SLIDES = [
   {
-    image: '/images/popup-october-privilege.webp',
-    alt: 'October Privilege Disc 20% – Taman Wisata Bougenville',
-    message:
-      'Halo Taman Wisata Bougenville! Saya tertarik dengan penawaran/promo October Privilege Disc 20%. Boleh saya mendapatkan informasi lebih lanjut? Saya mendapatkan informasi ini dari website.',
-  },
-  {
     image: '/images/popup-promo.webp',
     alt: 'Corporate Group Escape – Taman Wisata Bougenville',
     message:
