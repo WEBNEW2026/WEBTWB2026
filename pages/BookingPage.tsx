@@ -366,20 +366,9 @@ export function BookingPage() {
                                         <div className="p-3 flex items-center justify-between">
                                             <div>
                                                 <p className="text-xs text-gray-400">{t('home.fromPrice')}</p>
-                                                {villa.id !== 'forest-house' ? (
-                                                    <div>
-                                                        <p className="text-sm font-bold text-forest-dark">
-                                                            {formatPrice(Math.round(villa.price * 0.8))}
-                                                        </p>
-                                                        <p className="text-xs text-gray-400 line-through">
-                                                            {formatPrice(villa.price)}
-                                                        </p>
-                                                    </div>
-                                                ) : (
-                                                    <p className="text-sm font-bold text-forest-dark">
+                                                <p className="text-sm font-bold text-forest-dark">
                                                         {formatPrice(villa.price)}
                                                     </p>
-                                                )}
                                             </div>
                                             <ArrowRight size={16} className="text-gray-400 group-hover:text-forest transition-colors" />
                                         </div>

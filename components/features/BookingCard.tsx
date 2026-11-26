@@ -269,11 +269,7 @@ export function BookingCard({
                     <span className="text-[10px] font-bold tracking-widest text-white bg-forest-dark/70 px-1.5 py-0.5 rounded-sm">{currency.code}</span>
                     <span className="text-gray-500 text-sm">{t('common.perNight', '/ night')}</span>
                 </div>
-                {originalPriceWeekday && (
-                    <span className="text-gray-400 text-sm line-through">
-                        {format(originalPriceWeekday)}
-                    </span>
-                )}
+                {/* harga coret dihapus */}
             </div>
 
             {/* Rating */}
