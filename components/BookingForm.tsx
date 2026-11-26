@@ -89,10 +89,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ initialVilla, initialPackage 
   const calculateEstimate = () => {
     if (!selectedItem) return 0;
     let price = selectedItem.price;
-    // Diskon 20% untuk semua villa kecuali forest house
-    if (state.type === 'villa' && 'id' in selectedItem && selectedItem.id !== 'forest-house') {
-      price = Math.round(price * 0.8);
-    }
+    // Tidak ada diskon aktif
     if (state.checkIn && state.checkOut) {
       const start = new Date(state.checkIn);
       const end = new Date(state.checkOut);

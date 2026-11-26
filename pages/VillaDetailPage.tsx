@@ -124,10 +124,8 @@ export function VillaDetailPage({ villaId }: VillaDetailPageProps) {
 
     const currentVilla = VILLAS.find(v => v.id === villaId);
 
-    // Diskon 20% untuk semua villa kecuali Forest House
-    const DISCOUNT_PCT = 20;
-    const hasDiscount = currentVilla?.id !== 'forest-house';
-    const discountMultiplier = hasDiscount ? (1 - DISCOUNT_PCT / 100) : 1;
+    const hasDiscount = false;
+    const discountMultiplier = 1;
 
     // Load wishlist from localStorage on mount AND scroll to top
     useEffect(() => {
@@ -433,26 +431,7 @@ export function VillaDetailPage({ villaId }: VillaDetailPageProps) {
                                 {t('villa.pricingDetails', 'Detail Harga')}
                             </h2>
                             <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
-                                {/* Badge diskon */}
-                                {hasDiscount && (
-                                    <div className="flex items-center gap-3 px-6 pt-5 pb-3">
-                                        <span style={{
-                                            display: 'inline-flex',
-                                            alignItems: 'center',
-                                            gap: '6px',
-                                            backgroundColor: '#1a5c38',
-                                            color: '#fff',
-                                            fontWeight: 700,
-                                            fontSize: '12px',
-                                            letterSpacing: '0.04em',
-                                            padding: '4px 10px',
-                                            borderRadius: '6px',
-                                        }}>
-                                            🏷 {DISCOUNT_PCT}% OFF
-                                        </span>
-                                        <span style={{ color: '#555', fontSize: '14px', fontStyle: 'italic' }}>| Special Rate</span>
-                                    </div>
-                                )}
+                                 {/* Badge diskon dihapus */}
 
                                 <div className="px-6 pb-6 space-y-5">
                                     {/* WEEKDAY */}
@@ -460,10 +439,7 @@ export function VillaDetailPage({ villaId }: VillaDetailPageProps) {
                                         <p className="text-xs uppercase tracking-widest text-gray-500 font-bold mb-1">{t('villa.weekday', 'WEEKDAY')}</p>
                                         <p className="text-xs text-gray-400 mb-2">{t('villa.weekdayDays', 'Sen - Kam')}</p>
                                         <div className="flex items-center gap-3 flex-wrap">
-                                            {hasDiscount && (
-                                                <span className="text-gray-400 text-sm line-through">{formatPrice(currentVilla.priceWeekday)}</span>
-                                            )}
-                                            <span className="font-bold text-gray-900" style={{ fontSize: '22px' }}>{formatPrice(Math.round(currentVilla.priceWeekday * discountMultiplier))}</span>
+                                            <span className="font-bold text-gray-900" style={{ fontSize: '22px' }}>{formatPrice(currentVilla.priceWeekday)}</span>
                                             <span className="text-[10px] font-bold tracking-widest text-white bg-forest-dark/70 px-1.5 py-0.5 rounded-sm">{currency.code}</span>
                                             <span className="text-gray-400 text-sm">/ malam</span>
                                         </div>
@@ -474,10 +450,7 @@ export function VillaDetailPage({ villaId }: VillaDetailPageProps) {
                                         <p className="text-xs uppercase tracking-widest text-gray-500 font-bold mb-1">{t('villa.weekend', 'WEEKEND')}</p>
                                         <p className="text-xs text-gray-400 mb-2">{t('villa.weekendDays', 'Jum - Sab')}</p>
                                         <div className="flex items-center gap-3 flex-wrap">
-                                            {hasDiscount && (
-                                                <span className="text-gray-400 text-sm line-through">{formatPrice(currentVilla.priceWeekend)}</span>
-                                            )}
-                                            <span className="font-bold text-gray-900" style={{ fontSize: '22px' }}>{formatPrice(Math.round(currentVilla.priceWeekend * discountMultiplier))}</span>
+                                            <span className="font-bold text-gray-900" style={{ fontSize: '22px' }}>{formatPrice(currentVilla.priceWeekend)}</span>
                                             <span className="text-[10px] font-bold tracking-widest text-white bg-forest-dark/70 px-1.5 py-0.5 rounded-sm">{currency.code}</span>
                                             <span className="text-gray-400 text-sm">/ malam</span>
                                         </div>
@@ -488,10 +461,7 @@ export function VillaDetailPage({ villaId }: VillaDetailPageProps) {
                                         <p className="text-xs uppercase tracking-widest text-gray-500 font-bold mb-1">{t('villa.highSeason', 'HIGH SEASON')}</p>
                                         <p className="text-xs text-gray-400 mb-2">{t('villa.highSeasonDays', 'Hari Libur')}</p>
                                         <div className="flex items-center gap-3 flex-wrap">
-                                            {hasDiscount && (
-                                                <span className="text-gray-400 text-sm line-through">{formatPrice(currentVilla.priceHighSeason)}</span>
-                                            )}
-                                            <span className="font-bold text-gray-900" style={{ fontSize: '22px' }}>{formatPrice(Math.round(currentVilla.priceHighSeason * discountMultiplier))}</span>
+                                            <span className="font-bold text-gray-900" style={{ fontSize: '22px' }}>{formatPrice(currentVilla.priceHighSeason)}</span>
                                             <span className="text-[10px] font-bold tracking-widest text-white bg-forest-dark/70 px-1.5 py-0.5 rounded-sm">{currency.code}</span>
                                             <span className="text-gray-400 text-sm">/ malam</span>
                                         </div>
@@ -634,12 +604,10 @@ export function VillaDetailPage({ villaId }: VillaDetailPageProps) {
                     <div className="md:col-span-5 lg:col-span-4 relative order-first md:order-last">
                         <div className="sticky top-28 md:top-32 z-20 w-full">
                             <BookingCard
-                                price={Math.round((currentVilla.priceWeekday || currentVilla.price) * discountMultiplier)}
-                                priceWeekday={Math.round(currentVilla.priceWeekday * discountMultiplier)}
-                                priceWeekend={Math.round(currentVilla.priceWeekend * discountMultiplier)}
-                                priceHighSeason={Math.round(currentVilla.priceHighSeason * discountMultiplier)}
-                                originalPriceWeekday={hasDiscount ? currentVilla.priceWeekday : undefined}
-                                discountPercent={hasDiscount ? DISCOUNT_PCT : undefined}
+                                price={currentVilla.priceWeekday || currentVilla.price}
+                                priceWeekday={currentVilla.priceWeekday}
+                                priceWeekend={currentVilla.priceWeekend}
+                                priceHighSeason={currentVilla.priceHighSeason}
                                 rating={4.9}
                                 reviews={45}
                                 villaId={currentVilla.id}
